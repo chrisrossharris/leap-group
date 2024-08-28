@@ -16,64 +16,96 @@ const metadata = {
 
   <ContactUs
     id="form"
-    title="Drop us a message today!"
-    subtitle="For quicker answers, explore our FAQs section. You may find the solution you're looking  for right there! If not, our support team is delighted to help you."
+    title="Get in Touch with Us Today!"
+    subtitle="If you have any questions or need support, we're here to help. Feel free to reach out directly or explore our FAQs for quick answers."
     inputs={[
       {
         type: 'text',
         name: 'name',
-        label: 'Name',
+        label: 'Full Name',
       },
       {
         type: 'email',
         name: 'email',
-        label: 'Email',
+        label: 'Email Address',
       },
     ]}
     textarea={{
-      label: 'Message',
+      label: 'Your Message',
     }}
     disclaimer={{
       label:
-        'By submitting this contact form, you acknowledge and agree to the collection of your personal information.',
+        'By submitting this form, you consent to Leap Group collecting and using your personal information as outlined in our Privacy Policy.',
     }}
-    description="Our support team typically responds within 24 business hours."
+    description="Our team typically responds within one business day."
   />
+  
+  <!-- Features2 Widget ************** -->
+
+<Features2
+title="We're Here to Assist You!"
+items={[
+  {
+    title: 'General Support',
+    description: `Reach out for assistance with account management, navigating our services, billing inquiries, or any general questions about our offerings.`,
+  },
+  {
+    title: 'Contact Sales',
+    description:
+      'Connect with our sales team for questions about our services, customization options, pricing, or to discuss how we can support your business goals.',
+  },
+  {
+    title: 'Technical Support',
+    description:
+      'Get help with any technical issues, whether it\'s troubleshooting, software compatibility, or any challenges related to our services.',
+  },
+  {
+    title: 'Phone',
+    description: '+1 (502) 212-1390',
+    icon: 'tabler:headset',
+  },
+  {
+    title: 'Email',
+    description: 'support@leapgroupnetwork.com',
+    icon: 'tabler:mail',
+  },
+  {
+    title: 'Locations',
+    description: 'Visit us at one of our offices in Louisville, Cincinnati, Indianapolis, or Chicago.',
+    icon: 'tabler:map-pin',
+  },
+]}
+/>
+
 
   <!-- Features2 Widget ************** -->
 
   <Features2
-    title="We are here to help!"
-    items={[
-      {
-        title: 'General support',
-        description: `Chat with us for inquiries related to account management, website navigation, payment issues, accessing purchased templates or general questions about the website's functionality.`,
-      },
-      {
-        title: 'Contact sales',
-        description:
-          'Chat with us for questions about purchases, customization options, licensing for commercial use, inquiries about specific template, etc.',
-      },
-      {
-        title: 'Technical support',
-        description:
-          'Chat with us when facing issues like template installation, problems editing difficulties, compatibility issues with software or download errors, or other technical challenges related to using the templates.',
-      },
-      {
-        title: 'Phone',
-        description: '+1 (234) 567-890',
-        icon: 'tabler:headset',
-      },
-      {
-        title: 'Email',
-        description: 'contact@support.com',
-        icon: 'tabler:mail',
-      },
-      {
-        title: 'Location',
-        description: '1234 Lorem Ipsum St, 12345, Miami, EEUU',
-        icon: 'tabler:map-pin',
-      },
-    ]}
+  title="Our Locations"
+  tagline="Find Us"
+  columns={4}
+  items={[
+    {
+      title: 'Louisville',
+      description: '2500 Technology Dr, Louisville, KY 40299',
+      contact: '(502) 212-1390',
+    },
+    {
+      title: 'Cincinnati',
+      description: '214 E 8th St. Floor 2, Cincinnati, OH 45202',
+      contact: '(513) 723-0290',
+    },
+    {
+      title: 'Indianapolis',
+      description: '310 N. Alabama St, Suite 350, Indianapolis, IN 46204',
+      contact: '(317) 500-4928',
+    },
+    {
+      title: 'Chicago',
+      description: '110 North Wacker Drive, Chicago, IL 60606',
+      contact: '(317) 500-4928',
+    },
+  ]}
   />
+
 </Layout>

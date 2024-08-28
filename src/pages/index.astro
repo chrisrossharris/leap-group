@@ -2,6 +2,7 @@
 import Layout from '~/layouts/PageLayout.astro';
 
 import Hero from '~/components/widgets/Hero.astro';
+import Hero2 from '~/components/widgets/Hero2.astro';
 import Note from '~/components/widgets/Note.astro';
 import Features from '~/components/widgets/Features.astro';
 import Features2 from '~/components/widgets/Features2.astro';
@@ -11,9 +12,12 @@ import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
 import Stats from '~/components/widgets/Stats.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
+import { YouTube } from 'astro-embed';
+import Brands from '~/components/widgets/Brands.astro';
+
 
 const metadata = {
-  title: 'AstroWind — Free template for creating websites with Astro + Tailwind CSS',
+  title: 'Leap Group — Redefining Marketing Excellence with a Unified Approach',
   ignoreTitleTemplate: true,
 };
 ---
@@ -22,357 +26,328 @@ const metadata = {
   <!-- Hero Widget ******************* -->
 
   <Hero
+    tagline="Market Less"
     actions={[
       {
         variant: 'primary',
-        text: 'Get template',
-        href: 'https://github.com/onwidget/astrowind',
-        target: '_blank',
-        icon: 'tabler:download',
+        text: 'Get started',
+        href: '/contact',
+        icon: 'tabler:trending-up',
       },
       { text: 'Learn more', href: '#features' },
     ]}
-    image={{ src: '~/assets/images/hero-image.png', alt: 'AstroWind Hero Image' }}
+    
   >
     <Fragment slot="title">
-      Free template for <span class="hidden xl:inline">creating websites with</span>
-      <span class="text-accent dark:text-white highlight"> Astro 4.0</span> + Tailwind CSS
+      <span class="text-primary dark:text-white highlight uppercase"> Matter More</span> 
     </Fragment>
 
     <Fragment slot="subtitle">
       <span class="hidden sm:inline">
-        <span class="font-semibold">AstroWind</span> is a free, customizable and production-ready template for Astro 4.0
-        + Tailwind CSS.</span
+        <span class="font-semibold">Leap Group</span> unifies specialized companies under one roof, providing seamless collaboration and customized solutions to help brands grow smarter and matter more.</span
       >
-      <span class="block mb-1 sm:hidden font-bold text-blue-600">AstroWind: Production-ready.</span>
-      Suitable for Startups, Small Business, SaaS websites, Professional Portfolios, Marketing websites, Landing Pages &
-      Blogs.
+    </Fragment>
+
+    <Fragment slot="image">
+      <YouTube id="bmk6l96v8Os" title="Leap Group: Redefining Marketing Excellence with a Unified Approach"      />
+      <style is:inline>
+        lite-youtube {
+          margin: 0 auto;
+          max-width: 100%;
+        }
+      </style>
     </Fragment>
   </Hero>
+
 
   <!-- Note Widget ******************* -->
 
   <Note />
 
-  <!-- Features Widget *************** -->
-
-  <Features
-    id="features"
-    tagline="Features"
-    title="What you get with AstroWind"
-    subtitle="One of the most professional and comprehensive templates currently on the market. Most starred & forked Astro theme in 2022."
-    items={[
-      {
-        title: 'Astro + Tailwind CSS Integration',
-        description:
-          'A seamless integration between two great frameworks that offer high productivity, performance and versatility.',
-        icon: 'tabler:brand-tailwind',
-      },
-      {
-        title: 'Ready-to-use Components',
-        description:
-          'Widgets made with Tailwind CSS ready to be used in Marketing Websites, SaaS, Blogs, Personal Profiles, Small Business...',
-        icon: 'tabler:components',
-      },
-      {
-        title: 'Best Practices',
-        description:
-          'Creating secure, efficient, and user-friendly websites that deliver exceptional experiences and lasting value.',
-        icon: 'tabler:list-check',
-      },
-      {
-        title: 'Excellent Page Speed',
-        description:
-          'Having a good page speed impacts organic search ranking, improves user experience (UI/UX) and increase conversion rates.',
-        icon: 'tabler:rocket',
-      },
-      {
-        title: 'Search Engine Optimization (SEO)',
-        description:
-          "SEO lies in its ability to enhance a website's visibility, driving organic traffic and enabling it to reach a wider audience.",
-        icon: 'tabler:arrows-right-left',
-      },
-      {
-        title: 'Open to new ideas and contributions',
-        description:
-          'Embracing a culture that is open to new ideas and contributions is integral fostering innovation, collaboration, and a dynamic user experience.',
-        icon: 'tabler:bulb',
-      },
-    ]}
-  />
-
   <!-- Content Widget **************** -->
+
+  <!-- UPull & Pay Case Study **************** -->
 
   <Content
     isReversed
-    tagline="Inside template"
-    title="AstroWind's Blueprint: Fun Meets Functionality!"
+    tagline="Case Studies"
+    title="Discover How We Empower Brands to Transform Insights into Impactful Strategies."
     items={[
-      {
-        title: 'Built on top of Astro 4.0',
-        description:
-          'Benefiting from the performance and developer-friendly features of this modern static site generator.',
-      },
-      {
-        title: 'Styled using Tailwind CSS',
-        description:
-          'Facilitating rapid design and consistent styling with this highly popular utility-first CSS framework.',
-      },
-      {
-        title: 'Cross-browser compatibility',
-        description:
-          'Ensure your website looks and functions consistently across various web browsers, delivering a seamless experience to all users.',
-      },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-      alt: 'Colorful Image',
-    }}
-  >
+        {
+          title: 'Increased Customer Engagement',
+          description:
+            'Through targeted research, we identified key motivators for U-Pull & Pay’s audience, leading to a more engaging and customer-centric experience.',
+        },
+        {
+          title: 'Optimized Messaging Strategy',
+          description:
+            'Our insights helped refine U-Pull & Pay’s messaging, ensuring it resonated with their target audience and clearly communicated their unique value proposition.',
+        },
+        {
+          title: 'Improved Conversion Rates',
+          description:
+            'By aligning the customer journey with the insights we gathered, U-Pull & Pay saw a significant boost in conversion rates, turning more leads into loyal customers.',
+        },
+      ]}  
+        image={{
+        src: '~/assets/images/upull-pay.jpg',
+        alt: 'U-Pull & Pay Case Study',
+        }}
+        callToAction={{
+            target: '_blank',
+            text: 'View the case study',
+            icon: 'tabler:chevron-right',
+            href: '#',
+        }}
+    >
     <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Building on modern foundations</h3>
-      Gain a competitive advantage by incorporating industry leading practices
+      <h2 class="text-2xl  font-light tracking-tight dark:text-white sm:ext-3xl mb-6">  U-Pull & Pay </h2>
+      <hr class="mb-6 w-12 border-primary border-4 dark:divide-black">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2"> How we used research <br class="hidden md:inline" /> to rebuild the hotrod </h3>
+    
+    
     </Fragment>
 
     <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+      <div class="absolute inset-0 bg-green-50/5 dark:bg-black dark:bg-opacity-20"></div>
     </Fragment>
   </Content>
 
   <!-- Content Widget **************** -->
 
-  <Content
-    isAfterContent
-    items={[
+<Content
+isAfterContent
+items={[
+    {
+      title: 'Deep Customer Understanding',
+      description:
+        'By conducting in-depth research, we uncovered what truly drives Kubota’s customers, allowing us to tailor strategies that align with their needs and values.',
+    },
+    {
+      title: 'Enhanced Brand Perception',
+      description:
+        'Our insights led to a refreshed brand narrative for Kubota, strengthening its connection with customers and elevating brand perception in the market.',
+    },
+    {
+      title: 'Strategic Market Positioning',
+      description:
+        'Using competitive analysis, we helped Kubota identify market opportunities and strategically position their brand to stand out from competitors.',
+    },
+  ]}
+  
+image={{
+  src: '~/assets/images/kubota.jpg',
+  alt: 'Kubota Case Study',
+}}
+callToAction={{
+    target: '_blank',
+    text: 'View the case study',
+    icon: 'tabler:chevron-right',
+    href: '#',
+}}
+>
+<Fragment slot="content">
+  <h2 class="text-2xl  font-light tracking-tight dark:text-white sm:ext-3xl mb-6">Kubota</h2>
+  <hr class="mb-6 w-12 border-primary border-4 dark:divide-black">
+  
+  <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">How we used research to cultivate<br class="hidden md:inline" /> deeper customer connections
+  </h3>
+   
+</Fragment>
+
+<Fragment slot="bg">
+  <div class="absolute inset-0 bg-green-50/5 dark:bg-black dark:bg-opacity-20"></div>
+</Fragment>
+</Content>
+
+<!-- Content Widget **************** -->
+
+<Content
+isReversed
+isAfterContent
+items={[
+    {
+      title: 'Unified Brand Identity',
+      description:
+        'Through comprehensive research, we helped Premier Health consolidate its brand across multiple locations, ensuring a consistent and cohesive identity that resonates with patients.',
+    },
+    {
+      title: 'Improved Patient Engagement',
+      description:
+        'Our insights revealed key touchpoints in the patient journey, enabling Premier Health to enhance engagement and provide a more personalized healthcare experience.',
+    },
+    {
+      title: 'Strategic Communication Strategy',
+      description:
+        'We developed a communication strategy grounded in research that effectively conveyed Premier Health’s commitment to high-quality care, strengthening trust and loyalty among patients.',
+    },
+  ]}  
+image={{
+  src: '~/assets/images/premier-health.jpg',
+  alt: 'Premier Health',
+}}
+callToAction={{
+    target: '_blank',
+    text: 'View the case study',
+    icon: 'tabler:chevron-right',
+    href: '#',
+}}
+>
+<Fragment slot="content">
+  <h2 class="text-2xl  font-light tracking-tight dark:text-white sm:ext-3xl mb-6">  Premier Health</h2>
+  <hr class="mb-6 w-12 border-primary border-4 dark:divide-black">
+  <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">How we used research to unify<br class="hidden md:inline" /> a brand and elevate patient care</h3>
+
+</Fragment>
+
+<Fragment slot="bg">
+  <div class="absolute inset-0 bg-green-50/5 dark:bg-black dark:bg-opacity-20"></div>
+</Fragment>
+</Content>
+
+  
+  <!-- Brands Widget ****************** -->
+
+  <Brands
+    title="Clients & Partners"
+    subtitle="At Leap Group, we believe in the power of collaboration to drive innovation and create exceptional experiences."
+    icons={[]}
+    images={[
       {
-        title: 'High level of customization',
-        description: `Tailor the template effortlessly to match your brand's identity and requirements, making your website distinct and saving you time.`,
+        src: '~/assets/images/akc-logo.webp',
+        alt: 'American Kennel Club',
       },
       {
-        title: 'Multiple layout possibilities',
-        description:
-          'Explore various layout options to find the structure that best presents your content, enhancing user engagement and navigation.',
+        src: '~/assets/images/duck-brands.jpg',
+        alt: 'Duck Brands',
       },
       {
-        title: 'Fully responsive design',
-        description:
-          "Ensure your website's optimal performance on various devices and screen sizes, providing a consistent and enjoyable user experience.",
+        src: '~/assets/images/umcu.png',
+        alt: 'UMCU',
+      },
+
+      {
+        src: '~/assets/images/uofl.svg',
+        alt: 'University of Louisville',
       },
       {
-        title: 'Integration of media',
-        description:
-          'Seamlessly incorporate images, videos, and multimedia elements that enhance your content and engage visitors effectively.',
+        src: '~/assets/images/texas.jpeg',
+        alt: 'Texas Road House',
+      },
+      {
+        src: '~/assets/images/pf-chang.png',
+        alt: 'Pf Changs',
+      },
+      {
+        src: '~/assets/images/john-frieda-grey.png',
+        alt: 'John Frieda',
       },
     ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1600132806370-bf17e65e942f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2194&q=80',
-      alt: 'Blueprint Image',
-    }}
-  >
-    <Fragment slot="content">Ensure your online presence truly represents you.</Fragment>
-
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Content>
-
-  <!-- Content Widget **************** -->
-
-  <Content
-    isReversed
-    isAfterContent
-    items={[
-      {
-        title: 'Enhanced user engagement',
-        description:
-          'Captivate your audience with interactive elements, intuitive navigation, and visually appealing layouts, encouraging longer visits.',
-      },
-      {
-        title: 'Continuous improvement',
-        description:
-          'Ensure your website stays aligned with the latest trends and technologies through regular updates and enhancements.',
-      },
-      {
-        title: 'Time and resource efficiency',
-        description:
-          'Skip the time-consuming process of building a website from scratch and launch your online presence sooner with AstroWind.',
-      },
-      {
-        title: 'Community support',
-        description: `Join the growing AstroWind community for insights, resources, and assistance, ensuring you're never alone on your web development journey.`,
-      },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1611462985358-60d3498e0364?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-      alt: 'Astronauts Image',
-    }}
-  >
-    <Fragment slot="content">Designed to foster growth and success.</Fragment>
-
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Content>
-
-  <!-- Steps Widget ****************** -->
-
-  <Steps
-    title="Get your dream website up and running in no time with AstroWind."
-    items={[
-      {
-        title: 'Step 1: <span class="font-medium">Download</span>',
-        description:
-          "Kickstart with GitHub! Either fork the AstroWind template or simply click 'Use this template'. Your canvas awaits, ready for your digital masterpiece. In just a few clicks, you've already set the foundation.",
-        icon: 'tabler:package',
-      },
-      {
-        title: 'Step 2: <span class="font-medium">Add content</span>',
-        description:
-          "Pour your vision into it. Add images, text, and all that jazz to breathe life into your digital space. Remember, it's the content that tells your story, so make it captivating.",
-        icon: 'tabler:letter-case',
-      },
-      {
-        title: 'Step 3: <span class="font-medium">Customize styles</span>',
-        description:
-          'Give it your personal touch. Tailor colors, fonts, and layouts until it feels just right. Your unique flair, amplified by AstroWind! Precision in design ensures a seamless user experience.',
-        icon: 'tabler:paint',
-      },
-      {
-        title: 'Ready!',
-        icon: 'tabler:check',
-      },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1616198814651-e71f960c3180?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80',
-      alt: 'Steps image',
-    }}
   />
+
+  <!-- Hero2 Widget ******************* -->
+
+  <Hero2
+    tagline="Solutions & Offerings"
+    actions={[
+      { variant: 'primary', text: 'Get Started', href: 'https://github.com/onwidget/astrowind' },
+      { text: 'Learn more', href: '#features' },
+    ]}
+    image={{
+      src: '~/assets/images/leap-group-structure.png',
+      alt: 'AstroWind Hero Image',
+    }}
+  >
+    <Fragment slot="title">
+      A <span class="text-primary dark:text-white highlight"
+      >bespoke </span
+      > holding company within reach.
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      
+        <span class="font-semibold">“Market Less. Matter More.” </span>
+      isn’t just our tagline. It’s a belief that we built our entire business operations to support. It’s why we designed a holding company with specialized agencies that intentionally complement — not compete with — each other and provide deeper insights than any generalist ever could.
+    </Fragment>
+  </Hero2>
+
+
+
+  
+  
 
   <!-- Features2 Widget ************** -->
 
-  <Features2
-    title="Most used widgets"
-    subtitle="Provides frequently used components for building websites using Tailwind CSS"
-    tagline="Components"
-    items={[
-      {
-        title: 'Headers',
-        description: "Ever tried driving without GPS? Boom! That's why websites need headers for direction.",
-        icon: 'flat-color-icons:template',
-      },
-      {
-        title: 'Heros',
-        description:
-          "Picture a superhero landing – epic, right? That's the job of a Hero section, making grand entrances!",
-        icon: 'flat-color-icons:gallery',
-      },
-      {
-        title: 'Features',
-        description:
-          'Where websites strut their stuff and show off superpowers. No holding back on the bragging rights here!',
-        icon: 'flat-color-icons:approval',
-      },
-      {
-        title: 'Content',
-        description:
-          "Dive into the meat and potatoes of a site; without it, you'd just be window shopping. Content is king.",
-        icon: 'flat-color-icons:document',
-      },
-      {
-        title: 'Call-to-Action',
-        description:
-          'That enthusiastic friend who\'s always urging, "Do it! Do it!"? Yeah, that\'s this button nudging you towards adventure.',
-        icon: 'flat-color-icons:advertising',
-      },
-      {
-        title: 'Pricing',
-        description: 'Behold the dessert menu of the website world. Tempting choices await, can you resist?',
-        icon: 'flat-color-icons:currency-exchange',
-      },
-      {
-        title: 'Testimonial',
-        description: 'Step into the gossip corner! Here, other visitors spill the beans and share the juicy details.',
-        icon: 'flat-color-icons:voice-presentation',
-      },
-      {
-        title: 'Contact',
-        description:
-          'Like a digital mailbox, but faster! Drop a line, ask a question, or send a virtual high-five. Ding! Message in.',
-        icon: 'flat-color-icons:business-contact',
-      },
-      {
-        title: 'Footers',
-        description: "The footer's like the credits of a movie but sprinkled with easter eggs. Time to hunt!",
-        icon: 'flat-color-icons:database',
-      },
-    ]}
-  >
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Features2>
+<Features2
+title="How we empower brands to thrive"
+subtitle="Discover our key offerings that drive success in a rapidly evolving market."
+tagline="Service Offerings"
+items={[
+  {
+    title: 'Data-Driven Insights',
+    description: 'Transform raw data into actionable insights that drive strategic decisions and fuel business growth.',
+    icon: 'tabler:chart-bar',
+  },
+  {
+    title: 'Integrated Marketing Solutions',
+    description: 'Leverage our network of specialized agencies to create cohesive and impactful marketing strategies tailored to your brand.',
+    icon: 'tabler:network',
+  },
+  {
+    title: 'Creative Excellence',
+    description: 'Delivering breakthrough creative experiences that resonate with your audience and elevate your brand.',
+    icon: 'tabler:palette',
+  },
+  {
+    title: 'Agility and Flexibility',
+    description: 'A responsive approach that adapts to your evolving needs, ensuring you stay ahead in a dynamic market.',
+    icon: 'tabler:refresh',
+  },
+  {
+    title: 'Comprehensive Digital Strategy',
+    description: "From SEO to social media, we craft digital strategies that maximize your brand's online presence and impact.",
+    icon: 'tabler:world',
+  },
+  {
+    title: 'Collaborative Expertise',
+    description: 'Our unified team of experts works seamlessly across disciplines to deliver results that matter.',
+    icon: 'tabler:heart-handshake',
+  },
+]}
+>
+<Fragment slot="bg">
+  <div class="absolute inset-0 bg-green-50/50 dark:bg-transparent"></div>
+</Fragment>
+</Features2>
+
 
   <!-- HighlightedPosts Widget ******* -->
 
   <BlogLatestPosts
-    title="Find out more content in our Blog"
-    information={`The blog is used to display AstroWind documentation.
-                        Each new article will be an important step that you will need to know to be an expert in creating a website using Astro + Tailwind CSS.
-                        Astro is a very interesting technology. Thanks.
-                `}
+    title="Explore our latest insights on logic + magic"
+    information={`Dive into our insights on the logic + magic blog. 
+                  Each article uncovers key strategies, creative breakthroughs, 
+                  and data-driven insights that empower brands to excel in an ever-changing market. 
+                  Stay informed and inspired as we explore the intersection of logic and creativity in marketing.`}
   />
 
-  <!-- FAQs Widget ******************* -->
 
-  <FAQs
-    title="Frequently Asked Questions"
-    subtitle="Dive into the following questions to gain insights into the powerful features that AstroWind offers and how it can elevate your web development journey."
-    tagline="FAQs"
-    classes={{ container: 'max-w-6xl' }}
-    items={[
-      {
-        title: 'Why AstroWind?',
-        description:
-          "Michael Knight a young loner on a crusade to champion the cause of the innocent. The helpless. The powerless in a world of criminals who operate above the law. Here he comes Here comes Speed Racer. He's a demon on wheels.",
-      },
-      {
-        title: 'What do I need to start?',
-        description:
-          'Space, the final frontier. These are the voyages of the Starship Enterprise. Its five-year mission: to explore strange new worlds. Many say exploration is part of our destiny, but it’s actually our duty to future generations.',
-      },
-      {
-        title: 'How to install the Astro + Tailwind CSS template?',
-        description:
-          "Well, the way they make shows is, they make one show. That show's called a pilot. Then they show that show to the people who make shows, and on the strength of that one show they decide if they're going to make more shows.",
-      },
-      {
-        title: "What's something that you don't understand?",
-        description:
-          "A flower in my garden, a mystery in my panties. Heart attack never stopped old Big Bear. I didn't even know we were calling him Big Bear.",
-      },
-      {
-        title: 'What is something that you would like to try again?',
-        description:
-          "A business big enough that it could be listed on the NASDAQ goes belly up. Disappears! It ceases to exist without me. No, you clearly don't know who you're talking to, so let me clue you in.",
-      },
-      {
-        title: 'If you could only ask one question to each person you meet, what would that question be?',
-        description:
-          "This is not about revenge. This is about justice. A lot of things can change in twelve years, Admiral. Well, that's certainly good to know. About four years. I got tired of hearing how young I looked.",
-      },
-    ]}
-  />
+
 
   <!-- Stats Widget ****************** -->
 
   <Stats
-    stats={[
-      { title: 'Downloads', amount: '132K' },
-      { title: 'Stars', amount: '24.8K' },
-      { title: 'Forks', amount: '10.3K' },
-      { title: 'Users', amount: '48.4K' },
-    ]}
+  tagline="Real Results"
+  title="Discover the Impact We've Made by Turning Insights into Tangible Results."
+  
+  stats={[
+    { title: 'Downloads', amount: '132K' },
+    { title: 'Stars', amount: '24.8K' },
+    { title: 'Forks', amount: '10.3K' },
+    { title: 'Users', amount: '48.4K' },
+  ]}
   />
+
 
   <!-- CallToAction Widget *********** -->
 
@@ -380,20 +355,22 @@ const metadata = {
     actions={[
       {
         variant: 'primary',
-        text: 'Get template',
-        href: 'https://github.com/onwidget/astrowind',
-        target: '_blank',
-        icon: 'tabler:download',
+        text: 'Subscribe',
+        href: '/subscribe',
+        
+        icon: 'tabler:mail',
       },
     ]}
   >
     <Fragment slot="title">
-      Astro&nbsp;+&nbsp;<br class="block sm:hidden" /><span class="sm:whitespace-nowrap">Tailwind CSS</span>
+      Subscribe to Our Insights and Expertise
     </Fragment>
 
     <Fragment slot="subtitle">
-      Be very surprised by these huge fake numbers you are seeing on this page. <br class="hidden md:inline" />Don't
-      waste more time! :P
+      Receive relevant insights, expert perspectives, and exclusive research directly in your inbox.
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-green-50 dark:bg-transparent"></div>
     </Fragment>
   </CallToAction>
 </Layout>
