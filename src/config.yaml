@@ -11,7 +11,7 @@ metadata:
   title:
     default: Leap Group
     template: '%s — Leap Group'
-  description: "\U0001F438 Leap Group is a marketing agency that empowers startups and small businesses with data-driven strategies, creative design, and high-converting websites to fuel growth and enhance brand presence."
+  description: "Leap Group is a marketing agency that empowers startups and small businesses with data-driven strategies, creative design, and high-converting websites to fuel growth and enhance brand presence."
   robots:
     index: true
     follow: true
