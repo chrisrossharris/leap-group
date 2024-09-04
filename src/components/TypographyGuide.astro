@@ -1,0 +1,106 @@
+---
+const typographyItems = [
+  {
+    title: 'Headings',
+    description: 'Responsive heading styles - adjust your screen to see changes.',
+    content: [
+      { element: 'h1', text: 'H1 Heading', classes: 'text-6xl md:text-6xl font-bold leading-tighter tracking-tighter', sizes: { base: '6xl', md: '6xl' }, fontSize: '3.75rem', pixelSize: '60px', lineHeight: '1' },
+      { element: 'h2', text: 'H2 Heading', classes: 'text-5xl md:text-5xl font-bold leading-tighter', sizes: { base: '5xl', md: '5xl' }, fontSize: '3rem', pixelSize: '48px', lineHeight: '1' },
+      { element: 'h3', text: 'H3 Heading', classes: 'text-4xl md:text-4xl font-semibold', sizes: { base: '4xl', md: '4xl' }, fontSize: '2.25rem', pixelSize: '36px', lineHeight: '2.5rem', pixelLineHeight: '40px' },
+      { element: 'h4', text: 'H4 Heading', classes: 'text-3xl md:text-3xl font-semibold', sizes: { base: '3xl', md: '3xl' }, fontSize: '1.875rem', pixelSize: '30px', lineHeight: '2.25rem', pixelLineHeight: '36px' },
+      { element: 'h5', text: 'H5 Heading', classes: 'text-2xl md:text-2xl', sizes: { base: '2xl', md: '2xl' }, fontSize: '1.5rem', pixelSize: '24px', lineHeight: '2rem', pixelLineHeight: '32px' },
+      { element: 'h6', text: 'H6 Heading', classes: 'text-xl md:text-xl', sizes: { base: 'xl', md: 'xl' }, fontSize: '1.25rem', pixelSize: '20px', lineHeight: '1.75rem', pixelLineHeight: '28px' },
+    ]
+  },
+  {
+    title: 'Paragraphs',
+    description: 'Responsive paragraph text based on the Hero section.',
+    content: [
+      { element: 'p', text: 'This paragraph adjusts size with screen width. Larger on medium screens.', classes: 'text-lg md:text-xl leading-relaxed', sizes: { base: 'lg', md: 'xl' }, fontSize: '1.125rem', pixelSize: '18px', lineHeight: '1.75rem', pixelLineHeight: '28px' },
+      { element: 'p', text: 'Here’s a smaller paragraph, still adjusting responsively.', classes: 'text-base md:text-lg leading-relaxed', sizes: { base: 'base', md: 'lg' }, fontSize: '1rem', pixelSize: '16px', lineHeight: '1.5rem', pixelLineHeight: '24px' }
+    ]
+  }
+];
+---
+
+<section class="relative md:mt-[76px] not-prose">
+  <h1 class="text-4xl font-bold relative max-w-7xl mx-auto px-4 sm:px-6 mb-8">Typography Style Guide with Type Details</h1>
+
+  <!-- Grid Layout for Typography Items -->
+  <div class="relative max-w-7xl mx-auto px-4 sm:px-6">
+    {typographyItems.map(item => (
+      <div class="col-span-12 lg:col-span-6">
+        <h2 class="text-3xl font-semibold">{item.title}</h2>
+        <p class="text-muted">{item.description}</p>
+        <div class="space-y-4 mt-4">
+          {item.content.map((contentItem, index) => {
+            const Element = contentItem.element;
+            return (
+              <div key={index}>
+                <Element class={contentItem.classes}>{contentItem.text}</Element>
+                <p class="text-sm text-gray-500" id={`type-details-${index}`}>
+                  <span data-type={`type-${index}`} data-font-size={contentItem.fontSize} data-pixel-size={contentItem.pixelSize} data-line-height={contentItem.lineHeight}></span>
+                </p>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    ))}
+  </div>
+
+  <!-- Buttons Section within Grid -->
+  <div class="relative max-w-7xl mx-auto px-4 sm:px-6 mt-10 mb-10">
+    <div class="col-span-12 lg:col-span-6">
+      <h2 class="text-3xl font-semibold">Buttons</h2>
+      <p class="text-muted">Here are examples of primary, secondary, and tertiary buttons.</p>
+      <div class="flex space-x-4 mt-4">
+        <button class="btn-primary">Primary Button</button>
+        <button class="btn-secondary">Secondary Button</button>
+        <button class="btn-tertiary">Tertiary Button</button>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<script>
+  const typeDetails = [
+    { sizes: { base: '5xl', md: '6xl' }, selector: '[data-type="type-0"]' },
+    { sizes: { base: '4xl', md: '5xl' }, selector: '[data-type="type-1"]' },
+    { sizes: { base: '3xl', md: '4xl' }, selector: '[data-type="type-2"]' },
+    { sizes: { base: '2xl', md: '3xl' }, selector: '[data-type="type-3"]' },
+    { sizes: { base: 'xl', md: '2xl' }, selector: '[data-type="type-4"]' },
+    { sizes: { base: 'l', md: 'xl' }, selector: '[data-type="type-5"]' },
+    { sizes: { base: 'lg', md: 'lg' }, selector: '[data-type="type-6"]' },
+    { sizes: { base: 'base', md: 'lg' }, selector: '[data-type="type-7"]' },
+  ];
+
+  function updateTypeDetails() {
+    typeDetails.forEach((item, index) => {
+      let size = item.sizes.base;
+      if (window.innerWidth >= 1024 && item.sizes.lg) {
+        size = item.sizes.lg;
+      } else if (window.innerWidth >= 768 && item.sizes.md) {
+        size = item.sizes.md;
+      }
+
+      const element = document.querySelector(item.selector);
+      const fontSize = element.getAttribute('data-font-size');
+      const pixelSize = element.getAttribute('data-pixel-size');
+      const lineHeight = element.getAttribute('data-line-height');
+      
+      element.textContent = `${size} - Font size: ${fontSize} / ${pixelSize}px, Line height: ${lineHeight}`;
+    });
+  }
+
+  window.addEventListener('resize', updateTypeDetails);
+  window.addEventListener('DOMContentLoaded', updateTypeDetails);
+
+  const modeToggleBtn = document.getElementById('mode-toggle');
+  const htmlElement = document.documentElement;
+
+  modeToggleBtn.addEventListener('click', () => {
+    htmlElement.classList.toggle('dark');
+  });
+</script>

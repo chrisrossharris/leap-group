@@ -1,0 +1,19 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import TypographyGuide from '~/components/TypographyGuide.astro';
+import GridSystem from '~/components/GridSystem.astro';
+
+const metadata = {
+  title: 'Typography Style Guide - Responsive & Dark Mode',
+  ignoreTitleTemplate: true,
+};
+---
+
+<Layout metadata={metadata}>
+
+  <!-- Grid Layout -->
+  <GridSystem />
+
+  <!-- Typography Guide Widget ******************* -->
+  <TypographyGuide />
+</Layout>

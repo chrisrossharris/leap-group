@@ -1,0 +1,76 @@
+---
+const columns = 12; // Total number of columns in your grid system
+const breakpoints = [
+  { label: 'Base', minWidth: 0 },
+  { label: 'SM', minWidth: 640 },
+  { label: 'MD', minWidth: 768 },
+  { label: 'LG', minWidth: 1024 },
+  { label: 'XL', minWidth: 1280 },
+  { label: '2XL', minWidth: 1536 },
+];
+---
+
+<div class="relative max-w-7xl mx-auto px-4 sm:px-6 py-8">
+  <h2 class="text-2xl font-semibold mb-4">Grid System with Breakpoint Details</h2>
+  <div class="grid grid-cols-12 gap-4 gap-y-8">
+    {Array.from({ length: columns }).map((_, index) => (
+      <div class="relative col-span-1 border border-dashed border-gray-300 text-center p-2">
+        <span class="text-sm text-gray-500">Col {index + 1}</span>
+        <div class="text-xs text-gray-400 mt-2" id={`col-width-${index}`}></div>
+      </div>
+    ))}
+  </div>
+</div>
+
+<script>
+  const breakpoints = [
+    { label: 'Base', minWidth: 0 },
+    { label: 'SM', minWidth: 640 },
+    { label: 'MD', minWidth: 768 },
+    { label: 'LG', minWidth: 1024 },
+    { label: 'XL', minWidth: 1280 },
+    { label: '2XL', minWidth: 1536 },
+  ];
+
+  // Function to get padding and gap values depending on screen size
+  function getPaddingAndGap() {
+    const width = window.innerWidth;
+
+    // Get the correct padding and gap based on the breakpoint
+    if (width >= 1280) {
+      return { padding: 24, gap: 16 }; // XL and 2XL use sm:px-6 (24px padding) and gap-4 (16px gap)
+    } else if (width >= 640) {
+      return { padding: 24, gap: 16 }; // SM and MD use sm:px-6 (24px padding) and gap-4 (16px gap)
+    } else {
+      return { padding: 16, gap: 16 }; // Base uses px-4 (16px padding) and gap-4 (16px gap)
+    }
+  }
+
+  function getCurrentBreakpoint() {
+    const width = window.innerWidth;
+    return breakpoints.reduce((acc, bp) => (width >= bp.minWidth ? bp.label : acc), 'Base');
+  }
+
+  function updateColumnDetails() {
+    const container = document.querySelector('.max-w-7xl');
+    const containerWidth = container ? container.clientWidth : window.innerWidth;
+
+    // Get the padding and gap values
+    const { padding, gap } = getPaddingAndGap();
+
+    // Subtract the padding and total gaps from the container width
+    const totalGapsWidth = gap * (12 - 1); // 11 gaps between 12 columns
+    const adjustedWidth = containerWidth - padding * 2 - totalGapsWidth;
+
+    // Calculate width per column
+    const colWidth = Math.round(adjustedWidth / 12);
+
+    Array.from({ length: 12 }).forEach((_, index) => {
+      const element = document.getElementById(`col-width-${index}`);
+      element.textContent = `${colWidth}px per col (${getCurrentBreakpoint()})`;
+    });
+  }
+
+  window.addEventListener('resize', updateColumnDetails);
+  window.addEventListener('DOMContentLoaded', updateColumnDetails);
+</script>
