@@ -1,0 +1,398 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+import Hero from '~/components/widgets/Hero.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Content from '~/components/widgets/Content.astro';
+import Testimonials from '~/components/widgets/Testimonials.astro';
+import Steps2 from '~/components/widgets/Steps2.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Brands from '~/components/widgets/Brands.astro';
+
+const metadata = {
+  title: 'Leap Group - Beverage Industry Expertise',
+  ignoreTitleTemplate: true,
+};
+---
+
+<Layout metadata={metadata}>
+  
+  <!-- Hero Section -->
+  <Hero
+    tagline="Crafting Iconic Beverage Experiences"
+    image={{
+        src: '~/assets/images/about.jpg',
+        alt: 'Leap Group About Image',
+      }}
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Explore Our Work',
+        href: '#case-studies',
+        icon: 'tabler:eye',
+      },
+      {
+        text: 'Partner with Us',
+        href: '/contact',
+        variant: 'secondary',
+      },
+    ]}
+  >
+    <Fragment slot="title">
+      <span class="text-primary dark:text-white highlight">Leap Group</span> Helps Beverage Brands Matter More
+    </Fragment>
+    <Fragment slot="subtitle">
+      Leap Group partners with leading adult beverage brands to tell compelling stories, create unforgettable experiences, and elevate brands through innovative marketing solutions.
+    </Fragment>
+    
+  </Hero>
+
+  <!-- Trusted by Industry Leaders Section -->
+  <Brands
+    title="Trusted by Industry Leaders"
+    subtitle="We've partnered with the world's most renowned adult beverage brands to deliver impactful marketing solutions that resonate with consumers."
+    images={[
+        {
+          src: '~/assets/images/akc-logo.webp',
+          alt: 'American Kennel Club',
+        },
+        {
+          src: '~/assets/images/duck-brands.jpg',
+          alt: 'Duck Brands',
+        },
+        {
+          src: '~/assets/images/umcu.png',
+          alt: 'UMCU',
+        },
+  
+        {
+          src: '~/assets/images/uofl.svg',
+          alt: 'University of Louisville',
+        },
+        {
+          src: '~/assets/images/texas.jpeg',
+          alt: 'Texas Road House',
+        },
+        {
+          src: '~/assets/images/pf-chang.png',
+          alt: 'Pf Changs',
+        },
+        {
+          src: '~/assets/images/john-frieda-grey.png',
+          alt: 'John Frieda',
+        },
+      ]}
+    />
+  />
+
+  <!-- Our Expertise Section -->
+  <Features2
+    title="End-to-End Marketing Solutions for Beverage Brands"
+    subtitle="From brand strategy to social media campaigns, Leap Group's expertise helps adult beverage brands capture attention, build loyalty, and stand out."
+    tagline="Services We Provide"
+    items={[
+      {
+        title: 'Brand Strategy & Positioning',
+        description: 'Define your brand’s identity and position in the market with a strategy tailored to the adult beverage industry.',
+        icon: 'tabler:user',
+      },
+      {
+        title: 'Social Media Campaigns',
+        description: 'Create social media campaigns that engage your audience and amplify your brand’s voice.',
+        icon: 'tabler:social',
+      },
+      {
+        title: 'Video Production',
+        description: 'Craft compelling video content that tells your brand’s story and resonates with consumers.',
+        icon: 'tabler:video',
+      },
+      {
+        title: 'Experiential Marketing',
+        description: 'Develop experiences that connect consumers directly with your brand in memorable ways.',
+        icon: 'tabler:user',
+      },
+      {
+        title: 'Digital & E-commerce',
+        description: 'Drive online sales with effective digital strategies and e-commerce solutions.',
+        icon: 'tabler:user',
+      },
+      {
+        title: 'Data-driven Insights',
+        description: 'Leverage data and analytics to make informed decisions that enhance your brand’s performance.',
+        icon: 'tabler:user',
+      },
+    ]}
+  />
+
+  
+
+  <!-- Content Widget **************** -->
+
+  <Content
+  id="case-studies"
+  tagline="Case Studies"
+  title="Explore Our Success in the Adult Beverage Industry"
+  isReversed
+  items={[
+    {
+      title: 'Elevated Brand Perception',
+      description:
+        'Through a series of chef video collaborations, we positioned Lunazul Tequila as a premium spirit and enhanced its brand perception through social media engagement.',
+    },
+    {
+      title: 'Refined Audience Targeting',
+      description:
+        'Our campaign helped Lunazul’s messaging resonate with its target audience, increasing awareness and engagement in the competitive tequila market.',
+    },
+    {
+      title: 'Increased Social Media Reach',
+      description:
+        'With our focused social media strategy, Lunazul saw significant growth in followers and interactions, positioning it as a top choice for tequila lovers.',
+    },
+  ]}
+  image={{
+    src: '~/assets/images/lunazul.jpg',
+    alt: 'Lunazul Tequila Case Study',
+  }}
+  callToAction={{
+    target: '_blank',
+    text: 'View the case study',
+    icon: 'tabler:chevron-right',
+    href: 'https://leapsparkagency.com/work/lunazul-chef-video/',
+  }}
+>
+  <Fragment slot="content">
+    <h2 class="text-2xl  font-light tracking-tight dark:text-white sm:ext-3xl mb-6">Lunazul Tequila</h2>
+    <hr class="mb-6 w-12 border-primary border-4 dark:divide-black">
+    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+      How we transformed Lunazul Tequila <br class="hidden md:inline" /> with social media storytelling
+    </h3>
+  </Fragment>
+
+  <Fragment slot="bg">
+    <div class="absolute inset-0 bg-green-50/5 dark:bg-black dark:bg-opacity-20"></div>
+  </Fragment>
+</Content>
+
+<!-- Content Widget **************** -->
+
+<Content
+  isAfterContent
+  items={[
+    {
+      title: 'Enhanced Social Engagement',
+      description:
+        'Through data-driven insights, we developed a social media strategy for Admiral Nelson’s Rum, significantly increasing brand interaction and engagement.',
+    },
+    {
+      title: 'Strategic Brand Messaging',
+      description:
+        'Our insights led to a refined brand narrative for Admiral Nelson, allowing it to connect more deeply with its audience and increase loyalty.',
+    },
+    {
+      title: 'Increased Social Following',
+      description:
+        'Admiral Nelson saw a significant increase in followers and engagement across social platforms, turning casual drinkers into brand advocates.',
+    },
+  ]}
+  image={{
+    src: '~/assets/images/admiral-nelson.jpg',
+    alt: 'Admiral Nelson Case Study',
+  }}
+  callToAction={{
+    target: '_blank',
+    text: 'View the case study',
+    icon: 'tabler:chevron-right',
+    href: 'https://www.leapamp.com/case-studies/admiral-nelson',
+  }}
+>
+  <Fragment slot="content">
+    <h2 class="text-2xl  font-light tracking-tight dark:text-white sm:ext-3xl mb-6">Admiral Nelson Rum</h2>
+    <hr class="mb-6 w-12 border-primary border-4 dark:divide-black">
+    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+      How we boosted engagement <br class="hidden md:inline" /> for Admiral Nelson Rum
+    </h3>
+  </Fragment>
+
+  <Fragment slot="bg">
+    <div class="absolute inset-0 bg-green-50/5 dark:bg-black dark:bg-opacity-20"></div>
+  </Fragment>
+</Content>
+
+<!-- Content Widget **************** -->
+
+<Content
+  isReversed
+  isAfterContent
+  items={[
+    {
+      title: 'Reclaimed Local Icon Status',
+      description:
+        'Through a rebranding effort, we helped Christian Moerlein reconnect with its craft beer roots and reclaimed its status as a Cincinnati icon.',
+    },
+    {
+      title: 'Brand Storytelling',
+      description:
+        'By diving deep into Cincinnati’s brewing heritage, we created a narrative that resonated with local craft beer drinkers, making Christian Moerlein a must-have in the city.',
+    },
+    {
+      title: 'Increased Local Brand Loyalty',
+      description:
+        'The rebranding efforts led to a significant increase in local brand loyalty, with consumers choosing Christian Moerlein as their go-to beer.',
+    },
+  ]}
+  image={{
+    src: '~/assets/images/christian-moerlein.jpg',
+    alt: 'Christian Moerlein Case Study',
+  }}
+  callToAction={{
+    target: '_blank',
+    text: 'View the case study',
+    icon: 'tabler:chevron-right',
+    href: 'https://leapmatter.com/work/christian-moerlein/',
+  }}
+>
+  <Fragment slot="content">
+    <h2 class="text-2xl  font-light tracking-tight dark:text-white sm:ext-3xl mb-6">Christian Moerlein</h2>
+    <hr class="mb-6 w-12 border-primary border-4 dark:divide-black">
+    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+      How we revitalized <br class="hidden md:inline" /> Cincinnati’s brewing icon
+    </h3>
+  </Fragment>
+
+  <Fragment slot="bg">
+    <div class="absolute inset-0 bg-green-50/5 dark:bg-black dark:bg-opacity-20"></div>
+  </Fragment>
+</Content>
+
+<!-- Content Widget **************** -->
+
+<Content
+  isAfterContent
+  items={[
+    {
+      title: 'Increased Brand Awareness',
+      description:
+        'Through social media and video content, we helped Deep Eddy Vodka boost its brand awareness and connect with a wider audience.',
+    },
+    {
+      title: 'Creative Content Strategy',
+      description:
+        'Our innovative approach to video content creation highlighted the brand’s unique attributes and attracted attention across platforms.',
+    },
+    {
+      title: 'Expanded Social Media Reach',
+      description:
+        'The video strategy significantly expanded Deep Eddy’s reach on social media, turning it into one of the most talked-about vodka brands online.',
+    },
+  ]}
+  image={{
+    src: '~/assets/images/deep-eddy.jpg',
+    alt: 'Deep Eddy Vodka Case Study',
+  }}
+  callToAction={{
+    target: '_blank',
+    text: 'View the case study',
+    icon: 'tabler:chevron-right',
+    href: 'https://vimeo.com/leapspark/deepeddy?ts=0&share=copy',
+  }}
+>
+  <Fragment slot="content">
+    <h2 class="text-2xl  font-light tracking-tight dark:text-white sm:ext-3xl mb-6">Deep Eddy Vodka</h2>
+    <hr class="mb-6 w-12 border-primary border-4 dark:divide-black">
+    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+      How we created <br class="hidden md:inline" /> buzz for Deep Eddy Vodka
+    </h3>
+  </Fragment>
+
+  <Fragment slot="bg">
+    <div class="absolute inset-0 bg-green-50/5 dark:bg-black dark:bg-opacity-20"></div>
+  </Fragment>
+</Content>
+
+
+  <!-- Testimonials Section -->
+  <Testimonials
+    title="What Our Clients Say"
+    testimonials={[
+      {
+        testimonial: `Leap Group’s creative approach transformed Lunazul Tequila from a hidden gem into a must-have brand for tequila lovers. Their social media strategy drove significant engagement and helped us elevate our presence in the competitive spirits market.`,
+        name: 'John Beckmann',
+        job: 'Brand Manager, Lunazul Tequila',
+        image: {
+          src: 'https://images.unsplash.com/photo-1598511727105-c2d3d3e44561?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
+          alt: 'John Beckmann Image',
+        },
+      },
+      {
+        testimonial: `Their deep understanding of our brand and audience allowed Leap Group to create dynamic content that resonated with rum enthusiasts. Admiral Nelson saw unprecedented growth in engagement across our social platforms, thanks to their expertise.`,
+        name: 'Lisa Johnson',
+        job: 'Marketing Director, Admiral Nelson',
+        image: {
+          src: 'https://images.unsplash.com/photo-1623707292361-6c2c3211b6a0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
+          alt: 'Lisa Johnson Image',
+        },
+      },
+      {
+        testimonial: `Leap Group revitalized Christian Moerlein by tapping into Cincinnati's brewing history. Their storytelling brought our brand back to the forefront of local craft beer, driving both awareness and loyalty.`,
+        name: 'Andrew Jackson',
+        job: 'CEO, Christian Moerlein Brewing Co.',
+        image: {
+          src: 'https://images.unsplash.com/photo-1602740378460-d3fda51edc9a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
+          alt: 'Andrew Jackson Image',
+        },
+      },
+    ]}
+    callToAction={{
+      target: '_blank',
+      text: 'More testimonials...',
+      href: '#',
+      icon: 'tabler:chevron-right',
+    }}
+  />
+
+
+  <!-- Our Process Section -->
+  <Steps2
+  title="Our Process"
+  subtitle="Leap Group combines industry expertise with a results-driven approach to help adult beverage brands stand out in a competitive market."
+  items={[
+    {
+      title: 'Discovery and Research',
+      description:
+        'We begin by deeply understanding your brand, audience, and market position, ensuring our strategies are tailored to your goals.',
+    },
+    {
+      title: 'Creative Ideation',
+      description:
+        'Our team generates innovative concepts that resonate with your target audience, crafting unique stories that enhance brand identity.',
+    },
+    {
+      title: 'Execution Across Platforms',
+      description:
+        'We flawlessly execute campaigns across social media, video, and experiential platforms, ensuring your message reaches the right audience.',
+    },
+    {
+      title: 'Measurement and Optimization',
+      description:
+        'We continuously track performance and optimize strategies, making data-driven adjustments to ensure sustained success for your brand.',
+    },
+  ]}
+/>
+
+
+  <!-- Call To Action Section -->
+  <CallToAction
+    title="Ready to Elevate Your Beverage Brand?"
+    subtitle="Contact Leap Group to learn more about how we can help your brand shine in the competitive adult beverage market."
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Contact Us',
+        href: '/contact',
+        icon: 'tabler:mail',
+      },
+    ]}
+  />
+  
+</Layout>
