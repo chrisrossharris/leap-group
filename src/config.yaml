@@ -1,6 +1,6 @@
 site:
   name: Leap Group
-  site: 'https://leapgroupnetwork.com'
+  site: 'https://nbd.leapgroupnetwork.com'
   base: '/'
   trailingSlash: false
 
@@ -18,7 +18,7 @@ metadata:
   openGraph:
     site_name: Leap Group
     images:
-      - url: '~/assets/images/default.jpg'
+      - url: '~/assets/images/default.png'
         width: 1200
         height: 628
     type: website
