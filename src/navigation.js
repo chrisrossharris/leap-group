@@ -36,7 +36,7 @@ export const headerData = {
       href: getPermalink('/contact'),
     },
   ],
-  actions: [{ text: 'Client Portal', href: 'https://portal.leapgroupnetwork.com', target: '_blank' }],
+  actions: [{ text: 'Client Portal', href: 'https://support.leapgroupnetwork.com', target: '_blank' }],
 };
 
 export const footerData = {
@@ -44,27 +44,27 @@ export const footerData = {
     {
       title: 'Company',
       links: [
-        { text: 'About', href: '#' },
-        { text: 'Work', href: '#' },
-        { text: 'logic + magic', href: '#' },
-        { text: 'News', href: '#' },
-        { text: 'Contact ', href: '#' },
+        { text: 'About', href: 'https://leapgroupnetwork.com/about' },
+        { text: 'Work', href: 'https://leapgroupnetwork.com/work' },
+        { text: 'logic + magic', href: 'https://leapgroupnetwork.com/logic-magic' },
+        { text: 'News', href: 'https://leapgroupnetwork.com/news' },
+        { text: 'Contact ', href: 'https://leapgroupnetwork.com/contact' },
       ],
     },
     {
       title: 'Offices',
       links: [
-        { text: 'Louisville', href: '#' },
-        { text: 'Indianaplois', href: '#' },
-        { text: 'Cincinnati', href: '#' },
-        { text: 'Chicago', href: '#' },
+        { text: 'Louisville', href: 'https://leapgroupnetwork.com/contact#louisville' },
+        { text: 'Indianapolois', href: 'https://leapgroupnetwork.com/contact#indianapolois' },
+        { text: 'Cincinnati', href: 'https://leapgroupnetwork.com/contact#cincinnati' },
+        { text: 'Chicago', href: 'https://leapgroupnetwork.com/contact#chicago' },
       ],
     },
     {
       title: 'The Leap Group Advantage',
       links: [
         { text: 'When you partner with us you get access to specialized experts across the entire Leap Group Network', href: '#' },
-        { text: 'See the Difference', href: '#' },
+        { text: 'See the Difference', href: 'https://leapgroupnetwork.com/' },
       ],
     },
   ],
@@ -73,10 +73,10 @@ export const footerData = {
     { text: 'Privacy Policy', href: getPermalink('/privacy') },
   ],
   socialLinks: [
-    { ariaLabel: 'X', icon: 'tabler:brand-x', href: '#' },
-    { ariaLabel: 'Instagram', icon: 'tabler:brand-instagram', href: '#' },
-    { ariaLabel: 'LinkedIn', icon: 'tabler:brand-linkedin', href: '#' },
-    { ariaLabel: 'Facebook', icon: 'tabler:brand-facebook', href: '#' },
+    
+    { ariaLabel: 'Instagram', icon: 'tabler:brand-instagram', href: 'https://www.instagram.com/leapgroupnetwork' },
+    { ariaLabel: 'LinkedIn', icon: 'tabler:brand-linkedin', href: 'https://www.facebook.com/leapgroupnetwork' },
+    { ariaLabel: 'Facebook', icon: 'tabler:brand-facebook', href: 'https://www.linkedin.com/company/leap-group/' },
    ],
   footNote: `
   Leap Group Netowrk · All rights reserved.

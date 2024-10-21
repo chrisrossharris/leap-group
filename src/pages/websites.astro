@@ -1,0 +1,324 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Header from '~/components/widgets/Header.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Steps2 from '~/components/widgets/Steps2.astro';
+import Testimonials from '~/components/widgets/Testimonials.astro';
+import Content from '~/components/widgets/Content.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import Brands from '~/components/widgets/Brands.astro';
+
+const metadata = {
+  title: 'Website Solutions',
+};
+---
+
+<Layout metadata={metadata}>
+  <Fragment slot="header">
+    <Header
+      links={[]}
+      actions={[
+        {
+          text: 'Back to Homepage',
+          href: 'http://leapgroupnetwork.com',
+        },
+      ]}
+      isSticky
+      showToggleTheme
+    />
+  </Fragment>
+
+  <!-- Hero Section -->
+  <Hero
+    tagline="Innovative Website Solutions"
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Get Started',
+        href: 'http:/leapgroupnetwork.com/contact',
+        icon: 'tabler:trending-up',
+      },
+    ]}
+     image={{
+        src: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+        alt: 'Leap Group About Image',
+      }}
+  >
+    <Fragment slot="title">
+      Build Your Digital Future <br class="hidden md:inline"/> With Cutting-Edge Websites
+    </Fragment>
+
+    <Fragment slot="subtitle">
+        Whether it's eCommerce, B2B, or brand experiences, we create websites <br class="hidden md:inline"/>that engage users, enhance experiences, and drive results.
+    </Fragment>
+  </Hero>
+
+  <!-- Key Features -->
+  <Features2
+    id="features"
+    title="Our Website Capabilities"
+    subtitle="We offer robust, scalable, and tailored website solutions to meet your business needs."
+    items={[
+      {
+        title: 'Custom CMS Integrations',
+        description:
+          'Seamlessly integrate content management systems like Sitefinity, Kentico, or Episerver to provide a user-friendly backend with powerful front-end performance.',
+        icon: 'tabler:layout-dashboard',
+      },
+      {
+        title: 'eCommerce Solutions',
+        description:
+          'From personalized product journeys to advanced shopping cart features, our websites are designed to convert browsers into buyers.',
+        icon: 'tabler:shopping-cart',
+      },
+      {
+        title: 'Mobile Optimization',
+        description:
+          'Mobile-first designs ensure that your users have a flawless experience, no matter what device they use.',
+        icon: 'tabler:device-mobile',
+      },
+      {
+        title: 'Search & Filter Functions',
+        description:
+          'Provide users with advanced search capabilities and filters, enabling them to quickly find the content or products they need.',
+        icon: 'tabler:search',
+      },
+      {
+        title: 'Personalized User Journeys',
+        description:
+          'Tailored content and personalized recommendations improve user experience and boost conversions.',
+        icon: 'tabler:user-check',
+      },
+    ]}
+  />
+
+  <!-- Case Studies Section -->
+  <Content
+    isReversed
+    tagline="Success Stories"
+    items={[
+      {
+        title: 'INDCO: Personalized Product Experiences',
+        description:
+          'We developed an eCommerce platform for INDCO, integrating advanced CMS solutions like Progress Sitefinity and providing personalized shopping experiences, resulting in a 24% revenue increase.',
+        icon: 'tabler:check',
+      },
+      {
+        title: 'Kalamazoo Outdoor Gourmet: Enhanced UX/UI',
+        description:
+          'We transformed Kalamazoo’s website with a custom CMS, enhanced search functionality, and an integrated product configurator, resulting in a record sales year with a 34% increase in transactions.',
+        icon: 'tabler:check',
+      },
+      {
+        title: 'Premier Health: Simplifying Healthcare Experience',
+        description:
+          'By overhauling Premier Health’s website and focusing on user journeys and content personalization, we increased conversions by 22% and organic traffic by 110%.',
+        icon: 'tabler:check',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?q=80&w=1738&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      alt: 'Website Case Studies',
+    }}
+  >
+    <Fragment slot="title">
+      How Our Solutions Made <br /> Brands Matter More
+    </Fragment>
+  </Content>
+  <Content
+    isReversed
+    items={[
+      {
+        title: 'Integrating advanced CMS solutions',
+        description:
+          'We developed an eCommerce platform for INDCO, integrating advanced CMS solutions like Progress Sitefinity and providing personalized shopping experiences, resulting in a 24% revenue increase.',
+        icon: 'tabler:check',
+      },
+      {
+        title: 'Enhanced Search Capabilities',
+        description:
+          'We developed an enhanced search feature allows customers to search by almost anything and receive relevant results. Auto-population quickly learns from search terms and refines results.',
+        icon: 'tabler:check',
+      },
+      {
+        title: 'Epicor Intergration',
+        description:
+          'Sitefinity and Ucommerce were both integrated with Epicor, the INDCO ERP of record. This provides real-time order insertion that was previously a manual process. Product information is also pulled form Epicor to the website in real-time.',
+        icon: 'tabler:check',
+      },
+    ]}
+    image={{
+        src: '~/assets/images/indco-website.jpg',
+        alt: 'INDCO Web Design Leap Group',
+      }}
+      
+    >
+    
+        <Fragment slot="content">
+            <h2 class="text-2xl  font-light tracking-tight dark:text-white sm:ext-3xl mb-6">INDCO</h2>
+            <hr class="mb-6 w-12 border-primary border-4 dark:divide-black">
+            <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+                How we created personalized product <br class="hidden md:inline" />experiences for INDCO
+            </h3>
+        </Fragment>
+        <Fragment slot="bg">
+            <div class="absolute inset-0 bg-green-50/5 dark:bg-black dark:bg-opacity-20"></div>
+        </Fragment>
+    </Content>
+
+  <!-- Kalamazoo Outdoor Gourmet Case Study -->
+  <Content
+    items={[
+      {
+        title: 'Best-in-Class UX/UI',
+        description:
+          'We developed a user-friendly interface for Kalamazoo Outdoor Gourmet, allowing users to configure outdoor kitchens and place customized orders seamlessly.',
+        icon: 'tabler:check',
+      },
+      {
+        title: 'Product Configurator',
+        description:
+          'Our team created a product configurator that lets users select grill styles, gas options, and other customizations, streamlining the purchase process.',
+        icon: 'tabler:check',
+      },
+      {
+        title: 'Kentico CMS Integration',
+        description:
+          'We chose Kentico CMS as the hub for Kalamazoo’s digital marketing, resulting in a fully integrated platform with real-time inventory updates.',
+        icon: 'tabler:check',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/kalamazoo-website.jpg',
+      alt: 'Kalamazoo Outdoor Gourmet Website',
+    }}
+  >
+    
+    <Fragment slot="content">
+      <h2 class="text-2xl font-light tracking-tight dark:text-white sm:ext-3xl mb-6">
+        Kalamazoo Outdoor Gourmet
+      </h2>
+      <hr class="mb-6 w-12 border-primary border-4 dark:divide-black">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        How we improved customer experience <br class="hidden md:inline" /> with UX/UI and integrations
+      </h3>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-pink-50/5 dark:bg-black dark:bg-opacity-20"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Premier Health Case Study -->
+  <Content
+    isReversed
+    items={[
+      {
+        title: 'Personalized User Journeys',
+        description:
+          'We created personalized experiences by segmenting content based on user goals (finding a doctor, preparing for visits, etc.), leading to a more intuitive healthcare journey.',
+        icon: 'tabler:check',
+      },
+      {
+        title: 'MyChart Integration',
+        description:
+          'We integrated MyChart to enable online appointment scheduling, which streamlined the process and improved user satisfaction.',
+        icon: 'tabler:check',
+      },
+      {
+        title: 'Content Personalization',
+        description:
+          'Premier Health’s website now provides a tailored experience for each user, increasing engagement and reducing bounce rates.',
+        icon: 'tabler:check',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/premier-health.jpg',
+      alt: 'Premier Health Website',
+    }}
+  >
+   
+    <Fragment slot="content">
+      <h2 class="text-2xl font-light tracking-tight dark:text-white sm:ext-3xl mb-6">
+        Premier Health
+      </h2>
+      <hr class="mb-6 w-12 border-primary border-4 dark:divide-black">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        How we transformed the healthcare experience <br class="hidden md:inline" /> through personalization
+      </h3>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-pink-50/5 dark:bg-black dark:bg-opacity-20"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Testimonials -->
+  <Testimonials
+    title="What Our Clients Say"
+    testimonials={[
+      {
+        testimonial: "Leap's innovative solutions and strategic approach took our eCommerce platform to the next level. The results speak for themselves.",
+        name: "C. Mark Hennis, INDCO",
+      },
+      {
+        testimonial: "The new website provided a seamless, modern experience that helped increase our online engagement and sales exponentially.",
+        name: "Marketing Director, Kalamazoo Outdoor Gourmet",
+      },
+      {
+        testimonial: "Leap transformed our healthcare website into a user-friendly platform, drastically improving our engagement and patient satisfaction.",
+        name: "Marketing Director, Premier Health",
+      },
+    ]}
+  />
+
+  <!-- Key Stats Section -->
+  <Stats
+    title="Our Impact"
+    stats={[
+      { title: 'Revenue Growth', amount: '31%' },
+      { title: 'Conversion Rate Increase', amount: '47%' },
+      { title: 'Organic Traffic Increase', amount: '110%' },
+    ]}
+  />
+
+  <!-- FAQs Section -->
+  <FAQs
+    id="questions"
+    title="Frequently Asked Questions"
+    items={[
+      {
+        title: 'What CMS platforms do you support?',
+        description: 'We work with a range of platforms including Sitefinity, Kentico, Episerver, and custom-built CMS solutions.',
+      },
+      {
+        title: 'Do you offer website maintenance?',
+        description: 'Yes, we offer ongoing support and maintenance to ensure your website is always performing at its best.',
+      },
+      {
+        title: 'How do you ensure websites are SEO-friendly?',
+        description: 'We build websites with SEO best practices in mind, from site architecture to content tagging and speed optimization.',
+      },
+    ]}
+  />
+
+  <!-- Call to Action -->
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Start Your Project',
+        href: '/contact',
+      },
+    ]}
+  >
+    <Fragment slot="title">
+      Ready to Elevate Your Website Experience?
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      Let's create a website that meets your business needs and delights your users.
+    </Fragment>
+  </CallToAction>
+</Layout>
