@@ -48,39 +48,14 @@ const metadata = merge(
 <Layout metadata={metadata}>
   <Fragment slot="header">
     <Header
-      links={[
-        {
-        text: 'Capabilities',
-        links: [
-          {
-            text: 'Websites',
-            href: '/websites',
-          },
-          
-        ],
-      },
-      {
-      text: 'Industries',
-        links: [
-          {
-            text: 'Adult Beverage',
-            href: '/adult-beverage',
-          },
-          
-        ],
-      },
-      ]}
-      actions={[
-        {
-          text: 'Back to Homepage',
-          href: 'http://leapgroupnetwork.com',
-        },
-      ]}
+      
       isSticky
       showToggleTheme
     />
   </Fragment>
+ 
   <SinglePost post={{ ...post, image: image }} url={url}>
+    
     {post.Content ? <post.Content /> : <Fragment set:html={post.content || ''} />}
   </SinglePost>
   

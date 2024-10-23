@@ -21,11 +21,11 @@ const metadata = {
     <Header
       links={[
         {
-          text: 'Web Maintenance Program',
-          href: '/web-maintenance-program',
+          text: 'Maintenance Program',
+          href: '/maintenance-program',
         },
         {
-          text: 'Service Level Agreement',
+          text: 'SLA',
           href: '/sla',
         },
       ]}
@@ -104,6 +104,85 @@ const metadata = {
     ]}
   />
 
+  <!-- Brands Widget ****************** -->
+
+  <Brands
+    title="Clients & Partners"
+    subtitle="At Leap Group, we believe in the power of collaboration to drive innovation and create exceptional experiences."
+    icons={[]}
+    images={[
+      {
+        src: '~/assets/images/fruit-of-the-loom-logo.png',
+        alt: 'Fruit of the Loom logo',
+      },
+      {
+        src: '~/assets/images/russell-athletic-logo.png',
+        alt: 'Russell Athletic logo',
+      },
+      {
+        src: '~/assets/images/armstrong-ceilings-logo.png',
+        alt: 'Armstrong Ceilings logo',
+      },
+
+      {
+        src: '~/assets/images/hamilton-county-logo.jpg',
+        alt: 'Hamilton County Ohio logo',
+      },
+      {
+        src: '~/assets/images/john-frieda-grey.png',
+        alt: 'John Frieda logo',
+      },
+      {
+        src: '~/assets/images/heaven-hill-logo.png',
+        alt: 'Heaven Hill Brands logo',
+      },
+      {
+        src: '~/assets/images/u-pull-pay-logo.png',
+        alt: 'U-Pull & Pay logo',
+      },
+      {
+        src: '~/assets/images/senco-logo.png',
+        alt: 'SENCO logo',
+      },
+      {
+        src: '~/assets/images/kubota-logo.jpg',
+        alt: 'Kubota logo',
+      },
+      {
+        src: '~/assets/images/louisville-metro.jpeg',
+        alt: 'Louisville Metro logo',
+      },
+      {
+        src: '~/assets/images/jefferson-county-pva-logo.jpeg',
+        alt: 'Jefferson County PVA logo',
+      },
+      {
+        src: '~/assets/images/city-of-mason-logo.jpeg',
+        alt: 'City of Mason, OH logo',
+      },
+      {
+        src: '~/assets/images/louisville-water-logo.png',
+        alt: 'Louisville Water Co. logo',
+      },
+      {
+        src: '~/assets/images/lge-logo.jpg',
+        alt: 'LG&E logo',
+      },
+      {
+        src: '~/assets/images/belle-of-louisville-logo.jpg',
+        alt: 'Belle of Louisville logo',
+      },
+      {
+        src: '~/assets/images/university-of-louisville-logo.webp',
+        alt: 'University of Louisville logo',
+      },
+      {
+        src: '~/assets/images/carnival-logo.png',
+        alt: 'Carnival logo',
+      },
+    ]}
+  />
+
   <!-- Case Studies Section -->
   <Content
     isReversed
@@ -137,89 +216,127 @@ const metadata = {
       How Our Solutions Made <br /> Brands Matter More
     </Fragment>
   </Content>
+  <!-- Kubota Case Study -->
+  <Content
+    
+    items={[
+      {
+        title: 'Website Redesign',
+        description:
+          'We revamped Kubota’s website with a user-centric and responsive design, optimizing content to highlight their innovative products while providing a seamless experience across all devices.',
+        icon: 'tabler:check',
+      },
+      {
+        title: 'Interactive Features',
+        description:
+          'Our team developed a product configurator and dealer locator to enhance user engagement, allowing customers to customize equipment and easily find local dealers.',
+        icon: 'tabler:check',
+      },
+      {
+        title: 'SEO and Analytics',
+        description:
+          'We implemented SEO best practices and integrated comprehensive analytics to track user behavior, driving organic traffic and improving conversion rates.',
+        icon: 'tabler:check',
+      },
+    ]}
+    image={{
+        src: '~/assets/images/kubota-website.png',
+        alt: 'Kubota Tractor Corporation Website Leap Group',
+      }}
+      
+    >
+      <Fragment slot="content">
+          <h2 class="text-2xl font-light tracking-tight dark:text-white sm:ext-3xl mb-6">Kubota Tractor Corporation</h2>
+          <hr class="mb-6 w-12 border-primary border-4 dark:divide-black">
+          <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+              How we transformed the  <br class="hidden md:inline" />digital experience for Kubota
+          </h3>
+      </Fragment>
+      <Fragment slot="bg">
+          <div class="absolute inset-0 bg-green-50/5 dark:bg-black dark:bg-opacity-20"></div>
+      </Fragment>
+  </Content>
+  <!-- Hamilton Co. Case Study -->
   <Content
     isReversed
     items={[
       {
-        title: 'Integrating advanced CMS solutions',
+        title: 'Multi-Channel Campaign',
         description:
-          'We developed an eCommerce platform for INDCO, integrating advanced CMS solutions like Progress Sitefinity and providing personalized shopping experiences, resulting in a 24% revenue increase.',
+          'We launched the WeTHRIVE! initiative with a comprehensive media strategy, utilizing print, radio, online, billboards, and digital out-of-home (DOOH) experiences to reach and engage the community.',
         icon: 'tabler:check',
       },
       {
-        title: 'Enhanced Search Capabilities',
+        title: 'Interactive Features and Tools',
         description:
-          'We developed an enhanced search feature allows customers to search by almost anything and receive relevant results. Auto-population quickly learns from search terms and refines results.',
+          'Our campaign included GIS mapping for locating healthy options and interactive DOOH displays that engaged passersby with animated messages, promoting healthy living.',
         icon: 'tabler:check',
       },
       {
-        title: 'Epicor Intergration',
+        title: 'Social Media and Online Engagement',
         description:
-          'Sitefinity and Ucommerce were both integrated with Epicor, the INDCO ERP of record. This provides real-time order insertion that was previously a manual process. Product information is also pulled form Epicor to the website in real-time.',
+          'We developed an engaging online presence, including text alerts and social media updates, and optimized the watchusthrive.org website for desktop and mobile, enhancing digital reach and community involvement.',
         icon: 'tabler:check',
       },
     ]}
     image={{
-        src: '~/assets/images/indco-website.jpg',
-        alt: 'INDCO Web Design Leap Group',
+        src: '~/assets/images/hamilton-co-website.png',
+        alt: 'Hamilton County WeTHRIVE! Campaign',
       }}
       
     >
-    
-        <Fragment slot="content">
-            <h2 class="text-2xl  font-light tracking-tight dark:text-white sm:ext-3xl mb-6">INDCO</h2>
-            <hr class="mb-6 w-12 border-primary border-4 dark:divide-black">
-            <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-                How we created personalized product <br class="hidden md:inline" />experiences for INDCO
-            </h3>
-        </Fragment>
-        <Fragment slot="bg">
-            <div class="absolute inset-0 bg-green-50/5 dark:bg-black dark:bg-opacity-20"></div>
-        </Fragment>
-    </Content>
+      <Fragment slot="content">
+          <h2 class="text-2xl font-light tracking-tight dark:text-white sm:ext-3xl mb-6">Hamilton County</h2>
+          <hr class="mb-6 w-12 border-primary border-4 dark:divide-black">
+          <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+              How we launched a community-focused <br class="hidden md:inline" /> campaign for Hamilton County
+          </h3>
+      </Fragment>
+      <Fragment slot="bg">
+          <div class="absolute inset-0 bg-green-50/5 dark:bg-black dark:bg-opacity-20"></div>
+      </Fragment>
+  </Content>
 
-  <!-- Kalamazoo Outdoor Gourmet Case Study -->
+  <!-- Confluent Health Case Study -->
   <Content
+    
     items={[
       {
-        title: 'Best-in-Class UX/UI',
+        title: 'User-Centric Website Design',
         description:
-          'We developed a user-friendly interface for Kalamazoo Outdoor Gourmet, allowing users to configure outdoor kitchens and place customized orders seamlessly.',
+          'We redesigned Confluent Health’s website with modern aesthetics and a fully responsive layout, ensuring an optimal experience across desktops, tablets, and mobile devices.',
         icon: 'tabler:check',
       },
       {
-        title: 'Product Configurator',
+        title: 'Interactive Features',
         description:
-          'Our team created a product configurator that lets users select grill styles, gas options, and other customizations, streamlining the purchase process.',
+          'Our team integrated tools such as a clinic locator and online appointment scheduling, enhancing user engagement and streamlining the patient journey.',
         icon: 'tabler:check',
       },
       {
-        title: 'Kentico CMS Integration',
+        title: 'SEO and Content Optimization',
         description:
-          'We chose Kentico CMS as the hub for Kalamazoo’s digital marketing, resulting in a fully integrated platform with real-time inventory updates.',
+          'We applied SEO best practices and developed engaging content to improve visibility, drive traffic, and increase conversion rates for appointments and resource utilization.',
         icon: 'tabler:check',
       },
     ]}
     image={{
-      src: '~/assets/images/kalamazoo-website.jpg',
-      alt: 'Kalamazoo Outdoor Gourmet Website',
-    }}
-  >
-    
-    <Fragment slot="content">
-      <h2 class="text-2xl font-light tracking-tight dark:text-white sm:ext-3xl mb-6">
-        Kalamazoo Outdoor Gourmet
-      </h2>
-      <hr class="mb-6 w-12 border-primary border-4 dark:divide-black">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-        How we improved customer experience <br class="hidden md:inline" /> with UX/UI and integrations
-      </h3>
-    </Fragment>
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-pink-50/5 dark:bg-black dark:bg-opacity-20"></div>
-    </Fragment>
+        src: '~/assets/images/confluent-health-website.jpg',
+        alt: 'Confluent Health Website Leap Group',
+      }}
+      
+    >
+      <Fragment slot="content">
+          <h2 class="text-2xl font-light tracking-tight dark:text-white sm:ext-3xl mb-6">Confluent Health</h2>
+          <hr class="mb-6 w-12 border-primary border-4 dark:divide-black">
+          <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+              How we modernized the digital<br class="hidden md:inline" />  experience for Confluent Health
+          </h3>
+      </Fragment>
+      <Fragment slot="bg">
+          <div class="absolute inset-0 bg-green-50/5 dark:bg-black dark:bg-opacity-20"></div>
+      </Fragment>
   </Content>
-
   <!-- Premier Health Case Study -->
   <Content
     isReversed
@@ -262,6 +379,132 @@ const metadata = {
       <div class="absolute inset-0 bg-pink-50/5 dark:bg-black dark:bg-opacity-20"></div>
     </Fragment>
   </Content>
+  
+  <Content
+    
+    items={[
+      {
+        title: 'Integrating advanced CMS solutions',
+        description:
+          'We developed an eCommerce platform for INDCO, integrating advanced CMS solutions like Progress Sitefinity and providing personalized shopping experiences, resulting in a 24% revenue increase.',
+        icon: 'tabler:check',
+      },
+      {
+        title: 'Enhanced Search Capabilities',
+        description:
+          'We developed an enhanced search feature allows customers to search by almost anything and receive relevant results. Auto-population quickly learns from search terms and refines results.',
+        icon: 'tabler:check',
+      },
+      {
+        title: 'Epicor Intergration',
+        description:
+          'Sitefinity and Ucommerce were both integrated with Epicor, the INDCO ERP of record. This provides real-time order insertion that was previously a manual process. Product information is also pulled form Epicor to the website in real-time.',
+        icon: 'tabler:check',
+      },
+    ]}
+    image={{
+        src: '~/assets/images/indco-website.jpg',
+        alt: 'INDCO Web Design Leap Group',
+      }}
+      
+    >
+    
+      <Fragment slot="content">
+          <h2 class="text-2xl  font-light tracking-tight dark:text-white sm:ext-3xl mb-6">INDCO</h2>
+          <hr class="mb-6 w-12 border-primary border-4 dark:divide-black">
+          <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+              How we created personalized product <br class="hidden md:inline" />experiences for INDCO
+          </h3>
+      </Fragment>
+      <Fragment slot="bg">
+          <div class="absolute inset-0 bg-green-50/5 dark:bg-black dark:bg-opacity-20"></div>
+      </Fragment>
+  </Content>
+
+  <!-- Kalamazoo Outdoor Gourmet Case Study -->
+  <Content
+  isReversed
+    items={[
+      {
+        title: 'Best-in-Class UX/UI',
+        description:
+          'We developed a user-friendly interface for Kalamazoo Outdoor Gourmet, allowing users to configure outdoor kitchens and place customized orders seamlessly.',
+        icon: 'tabler:check',
+      },
+      {
+        title: 'Product Configurator',
+        description:
+          'Our team created a product configurator that lets users select grill styles, gas options, and other customizations, streamlining the purchase process.',
+        icon: 'tabler:check',
+      },
+      {
+        title: 'Kentico CMS Integration',
+        description:
+          'We chose Kentico CMS as the hub for Kalamazoo’s digital marketing, resulting in a fully integrated platform with real-time inventory updates.',
+        icon: 'tabler:check',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/kalamazoo-website.jpg',
+      alt: 'Kalamazoo Outdoor Gourmet Website',
+    }}
+  >
+    
+    <Fragment slot="content">
+      <h2 class="text-2xl font-light tracking-tight dark:text-white sm:ext-3xl mb-6">
+        Kalamazoo Outdoor Gourmet
+      </h2>
+      <hr class="mb-6 w-12 border-primary border-4 dark:divide-black">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        How we improved customer experience <br class="hidden md:inline" /> with UX/UI and integrations
+      </h3>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-pink-50/5 dark:bg-black dark:bg-opacity-20"></div>
+    </Fragment>
+  </Content>
+  
+  <Content
+    
+    items={[
+      {
+        title: 'Website Modernization',
+        description:
+          'We revamped Third Federal’s website with a modern design and an upgraded CMS, enhancing the visual appeal and improving content management efficiency.',
+        icon: 'tabler:check',
+      },
+      {
+        title: 'Interactive Tools',
+        description:
+          'Our team integrated mortgage calculators, investment rate tables, and early approval promotions to engage users and streamline their financial decision-making process.',
+        icon: 'tabler:check',
+      },
+      {
+        title: 'Accessibility and User Experience',
+        description:
+          'We ensured the website met ADA compliance standards and developed educational content that provided users with valuable insights on financial products and services, enhancing overall engagement.',
+        icon: 'tabler:check',
+      },
+    ]}
+    image={{
+        src: '~/assets/images/third-federal-website.jpg',
+        alt: 'Third Federal Savings & Loan Website Leap Group',
+      }}
+      
+    >
+      <Fragment slot="content">
+          <h2 class="text-2xl font-light tracking-tight dark:text-white sm:ext-3xl mb-6">Third Federal Savings & Loan</h2>
+          <hr class="mb-6 w-12 border-primary border-4 dark:divide-black">
+          <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+              How we transformed the digital platform <br class="hidden md:inline" /> for Third Federal
+          </h3>
+      </Fragment>
+      <Fragment slot="bg">
+          <div class="absolute inset-0 bg-green-50/5 dark:bg-black dark:bg-opacity-20"></div>
+      </Fragment>
+</Content>
+
+  
 
   <!-- Testimonials -->
   <Testimonials
