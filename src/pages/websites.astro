@@ -21,12 +21,16 @@ const metadata = {
     <Header
       links={[
         {
-          text: 'Maintenance Program',
-          href: '/maintenance-program',
+          text: 'Maintenance Programs',
+          href: '/maintenance-programs',
         },
         {
           text: 'SLA',
           href: '/sla',
+        },
+        {
+          text: 'SOC2',
+          href: '/soc2',
         },
       ]}
       actions={[
@@ -57,11 +61,11 @@ const metadata = {
       }}
   >
     <Fragment slot="title">
-      Build Your Digital Future <br class="hidden md:inline"/> With Cutting-Edge Websites
+      Build Your Digital Future<br class="hidden md:inline"/>&nbsp;with a Cutting-Edge Website
     </Fragment>
 
     <Fragment slot="subtitle">
-        Whether it's eCommerce, B2B, or brand experiences, we create websites <br class="hidden md:inline"/>that engage users, enhance experiences, and drive results.
+        Whether it's eCommerce, B2B, B2C, Governmental or brand experiences,<br class="hidden md:inline"/> we create websites that engage users, enhance experiences, and drive results.
     </Fragment>
   </Hero>
 
@@ -107,13 +111,12 @@ const metadata = {
   <!-- Brands Widget ****************** -->
 
   <Brands
-    title="Clients & Partners"
-    subtitle="At Leap Group, we believe in the power of collaboration to drive innovation and create exceptional experiences."
+    title="Example Clients"
     icons={[]}
     images={[
       {
-        src: '~/assets/images/fruit-of-the-loom-logo.png',
-        alt: 'Fruit of the Loom logo',
+        src: '~/assets/images/john-frieda-grey.png',
+        alt: 'John Frieda logo',
       },
       {
         src: '~/assets/images/russell-athletic-logo.png',
@@ -128,9 +131,10 @@ const metadata = {
         src: '~/assets/images/hamilton-county-logo.jpg',
         alt: 'Hamilton County Ohio logo',
       },
+     
       {
-        src: '~/assets/images/john-frieda-grey.png',
-        alt: 'John Frieda logo',
+        src: '~/assets/images/fruit-of-the-loom-logo.png',
+        alt: 'Fruit of the Loom logo',
       },
       {
         src: '~/assets/images/heaven-hill-logo.png',
@@ -180,8 +184,40 @@ const metadata = {
         src: '~/assets/images/carnival-logo.png',
         alt: 'Carnival logo',
       },
+      {
+        src: '~/assets/images/kalamazoo-logo.png',
+        alt: 'Kalamazoo logo',
+      },
+      {
+        src: '~/assets/images/evs-logo.png',
+        alt: 'EVS logo',
+      },
+      {
+        src: '~/assets/images/akc-logo.webp',
+        alt: 'American Kennel Club logo',
+      },
+      {
+        src: '~/assets/images/hersheys-logo.png',
+        alt: 'Hersheys logo',
+      },
+      {
+        src: '~/assets/images/lilly-logo.png',
+        alt: 'Lily logo',
+      },
+      {
+        src: '~/assets/images/kindred-healthcare-logo.png',
+        alt: 'Kindred logo',
+      },
+      {
+        src: '~/assets/images/duck-brands-logo.jpg',
+        alt: 'Duck Brands logo',
+      },
     ]}
-  />
+  >
+  <Fragment slot="subtitle">
+    At Leap Group, we believe in the power of collaboration to <br />  drive innovation and create exceptional experiences.
+  </Fragment>
+  </Brands>
 
   <!-- Case Studies Section -->
   <Content
@@ -527,7 +563,7 @@ const metadata = {
 
   <!-- Key Stats Section -->
   <Stats
-    title="Our Impact"
+    title="Average Impact"
     stats={[
       { title: 'Revenue Growth', amount: '31%' },
       { title: 'Conversion Rate Increase', amount: '47%' },
@@ -542,11 +578,11 @@ const metadata = {
     items={[
       {
         title: 'What CMS platforms do you support?',
-        description: 'We work with a range of platforms including Sitefinity, Kentico, Episerver, and custom-built CMS solutions.',
+        description: 'We work with a range of platforms including Wordpress, Sitefinity, Kentico, Episerver, and custom-built CMS solutions.',
       },
       {
         title: 'Do you offer website maintenance?',
-        description: 'Yes, we offer ongoing support and maintenance to ensure your website is always performing at its best.',
+        description: 'Yes, we offer ongoing support and maintenance to ensure your website is always performing at its best. <a class="text-primary" href="/maintenance-programs">See our maintenance programs →</a>',
       },
       {
         title: 'How do you ensure websites are SEO-friendly?',
