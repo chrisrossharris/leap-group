@@ -27,16 +27,18 @@ const metadata = {
         {
           text: 'SLA',
           href: '/sla',
+          target: '_blank',
         },
         {
           text: 'SOC2',
           href: 'https://hrhhzybxcgcanrrxhhrc.supabase.co/storage/v1/object/sign/nbd/Flexential-2023-Type-2-SOC-2-Report.pdf?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJuYmQvRmxleGVudGlhbC0yMDIzLVR5cGUtMi1TT0MtMi1SZXBvcnQucGRmIiwiaWF0IjoxNzI5NzE1ODY5LCJleHAiOjE3NjEyNTE4Njl9.8Y4wX2dvvcOfzeBEQUt3cFOd13JBTFQRnMgpAkWEElI&t=2024-10-23T20%3A37%3A49.938Z',
+          target: '_blank',
         },
       ]}
       actions={[
         {
           text: 'Back to Homepage',
-          href: 'http://leapgroupnetwork.com',
+          href: 'https://leapgroupnetwork.com',
         },
       ]}
       isSticky
@@ -51,7 +53,7 @@ const metadata = {
       {
         variant: 'primary',
         text: 'Get Started',
-        href: 'http:/leapgroupnetwork.com/contact',
+        href: 'http://leapgroupnetwork.com/contact',
         icon: 'tabler:trending-up',
       },
     ]}
@@ -65,7 +67,7 @@ const metadata = {
     </Fragment>
 
     <Fragment slot="subtitle">
-        Whether it's eCommerce, B2B, B2C, or Governmental, we create<br class="hidden md:inline"/>&nbsp;websites  that engage users, enhance experiences, and drive results.
+        Whether it's eCommerce, B2B, B2C, or Governmental, we create&nbsp;<br class="hidden md:inline"/>websites  that engage users, enhance experiences, and drive results.
     </Fragment>
   </Hero>
 
@@ -115,42 +117,8 @@ const metadata = {
     icons={[]}
     images={[
       {
-        src: '~/assets/images/john-frieda-grey.png',
-        alt: 'John Frieda logo',
-      },
-      {
-        src: '~/assets/images/russell-athletic-logo.png',
-        alt: 'Russell Athletic logo',
-      },
-      {
-        src: '~/assets/images/armstrong-ceilings-logo.png',
-        alt: 'Armstrong Ceilings logo',
-      },
-
-      {
         src: '~/assets/images/hamilton-county-logo.jpg',
         alt: 'Hamilton County Ohio logo',
-      },
-     
-      {
-        src: '~/assets/images/fruit-of-the-loom-logo.png',
-        alt: 'Fruit of the Loom logo',
-      },
-      {
-        src: '~/assets/images/heaven-hill-logo.png',
-        alt: 'Heaven Hill Brands logo',
-      },
-      {
-        src: '~/assets/images/u-pull-pay-logo.png',
-        alt: 'U-Pull & Pay logo',
-      },
-      {
-        src: '~/assets/images/senco-logo.png',
-        alt: 'SENCO logo',
-      },
-      {
-        src: '~/assets/images/kubota-logo.jpg',
-        alt: 'Kubota logo',
       },
       {
         src: '~/assets/images/louisville-metro.jpeg',
@@ -171,6 +139,38 @@ const metadata = {
       {
         src: '~/assets/images/lge-logo.jpg',
         alt: 'LG&E logo',
+      },
+      {
+        src: '~/assets/images/john-frieda-grey.png',
+        alt: 'John Frieda logo',
+      },
+      {
+        src: '~/assets/images/russell-athletic-logo.png',
+        alt: 'Russell Athletic logo',
+      },
+      {
+        src: '~/assets/images/armstrong-ceilings-logo.png',
+        alt: 'Armstrong Ceilings logo',
+      },
+      {
+        src: '~/assets/images/fruit-of-the-loom-logo.png',
+        alt: 'Fruit of the Loom logo',
+      },
+      {
+        src: '~/assets/images/heaven-hill-logo.png',
+        alt: 'Heaven Hill Brands logo',
+      },
+      {
+        src: '~/assets/images/u-pull-pay-logo.png',
+        alt: 'U-Pull & Pay logo',
+      },
+      {
+        src: '~/assets/images/senco-logo.png',
+        alt: 'SENCO logo',
+      },
+      {
+        src: '~/assets/images/kubota-logo.jpg',
+        alt: 'Kubota logo',
       },
       {
         src: '~/assets/images/belle-of-louisville-logo.jpg',
@@ -215,43 +215,84 @@ const metadata = {
     ]}
   >
   <Fragment slot="subtitle">
-    At Leap Group, we believe in the power of collaboration to <br />  drive innovation and create exceptional experiences.
+    At Leap Group, we believe in the power of collaboration to&nbsp;<br class="hidden md:inline"/>drive innovation and create exceptional experiences.
   </Fragment>
   </Brands>
 
-  <!-- Case Studies Section -->
+  <!-- Governmental Case Studies Section -->
   <Content
     isReversed
     tagline="Success Stories"
     items={[
       {
-        title: 'INDCO: Personalized Product Experiences',
+        title: 'City of Mason: Digital Engagement Platform',
         description:
-          'We developed an eCommerce platform for INDCO, integrating advanced CMS solutions like Progress Sitefinity and providing personalized shopping experiences, resulting in a 24% revenue increase.',
+          'We developed a comprehensive digital platform for the City of Mason, integrating community resources and services, resulting in increased citizen engagement and a 30% rise in online service usage.',
         icon: 'tabler:check',
       },
       {
-        title: 'Kalamazoo Outdoor Gourmet: Enhanced UX/UI',
+        title: 'Hamilton County: WeTHRIVE! Initiative',
         description:
-          'We transformed Kalamazoo’s website with a custom CMS, enhanced search functionality, and an integrated product configurator, resulting in a record sales year with a 34% increase in transactions.',
+          'Our multi-channel campaign for Hamilton County’s WeTHRIVE! initiative leveraged interactive features and GIS mapping to promote healthier lifestyles, leading to 28,000 map downloads and the establishment of 7 community gardens.',
         icon: 'tabler:check',
       },
       {
-        title: 'Premier Health: Simplifying Healthcare Experience',
+        title: 'Louisville Metro: Public Health Awareness',
         description:
-          'By overhauling Premier Health’s website and focusing on user journeys and content personalization, we increased conversions by 22% and organic traffic by 110%.',
+          'We partnered with Louisville Metro to create an awareness campaign focused on public health. Utilizing social media, billboards, and digital tools, the initiative saw a 50% increase in public participation in health programs.',
         icon: 'tabler:check',
       },
     ]}
     image={{
-      src: 'https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?q=80&w=1738&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-      alt: 'Website Case Studies',
+      src: '~/assets/images/government-websites.jpg',
+      alt: 'Governmental Work Case Studies',
     }}
   >
     <Fragment slot="title">
-      How Our Solutions Made <br /> Brands Matter More
+      How Our Solutions&nbsp;<br class="md:inline"/>Empowered Communities and &nbsp;<br class="hidden md:inline"/>Government Initiatives
+    </Fragment>
+</Content>
+  <!-- EVS Website Case Study -->
+  <Content
+  isReversed
+  items={[
+    {
+      title: 'Website Redesign and Modernization',
+      description:
+        'We redesigned the EVS website to align with their brand identity, creating a modern, responsive design that enhances the user experience across all devices.',
+      icon: 'tabler:check',
+    },
+    {
+      title: 'Content Management System Integration',
+      description:
+        'Our team implemented a robust CMS to streamline content updates and management, allowing EVS to maintain a consistent and dynamic online presence effortlessly.',
+      icon: 'tabler:check',
+    },
+    {
+      title: 'Enhanced User Engagement Tools',
+      description:
+        'We integrated features like service locators, client portals, and resource libraries to improve user engagement and provide easy access to EVS’s services and information.',
+      icon: 'tabler:check',
+    },
+  ]}
+  image={{
+      src: '~/assets/images/evs-website.png',
+      alt: 'EVS Web Design',
+    }}
+  >
+    <Fragment slot="content">
+        <h2 class="text-2xl font-light tracking-tight dark:text-white sm:ext-3xl mb-6">EVS</h2>
+        <hr class="mb-6 w-12 border-primary border-4 dark:divide-black">
+        <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+            How we modernized the digital&nbsp;<br class="hidden md:inline"/> platform and enhanced user engagement for EVS
+        </h3>
+    </Fragment>
+    <Fragment slot="bg">
+        <div class="absolute inset-0 bg-green-50/5 dark:bg-black dark:bg-opacity-20"></div>
     </Fragment>
   </Content>
+
+
   <!-- Kubota Case Study -->
   <Content
     
@@ -597,7 +638,7 @@ const metadata = {
       {
         variant: 'primary',
         text: 'Start Your Project',
-        href: '/contact',
+        href: 'http://leapgroupnetwork.com/contact',
       },
     ]}
   >

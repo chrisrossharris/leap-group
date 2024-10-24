@@ -64,7 +64,7 @@ export const footerData = {
       title: 'The Leap Group Advantage',
       links: [
         { text: 'When you partner with us you get access to specialized experts across the entire Leap Group Network', href: '#' },
-        { text: 'See the Difference', href: 'https://leapgroupnetwork.com/' },
+        { text: 'See the Difference →', href: 'https://leapgroupnetwork.com/' },
       ],
     },
   ],
