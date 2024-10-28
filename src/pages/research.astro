@@ -1,0 +1,358 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Header from '~/components/widgets/Header.astro';
+
+import Hero from '~/components/widgets/Hero.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Steps2 from '~/components/widgets/Steps2.astro';
+import Testimonials from '~/components/widgets/Testimonials.astro';
+import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
+import Content from '~/components/widgets/Content.astro';
+
+import Features2 from '~/components/widgets/Features2.astro';
+import Features from '~/components/widgets/Features.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import Brands from '~/components/widgets/Brands.astro';
+
+import { YouTube } from 'astro-embed';
+
+const metadata = {
+  title: 'Research',
+};
+---
+
+<Layout metadata={metadata}>
+  <Fragment slot="header">
+    <Header
+      links={[
+        
+      ]}
+      actions={[
+        {
+          text: 'Back to Homepage',
+          href: 'http://leapgroupnetwork.com',
+        },
+      ]}
+      isSticky
+      showToggleTheme
+    />
+  </Fragment>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    tagline="Research"
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Request a quote',
+        href: '/request',
+      },
+    ]}
+  >
+    <Fragment slot="title">
+        Discover What Truly Drives <br> Your Brand’s Success
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      Research is the foundation of everything we do. Led by a PhD-level team of anthropologists, we dive deep into the nuances of human behavior to extract unique insights that make your brand stand out. By combining advanced AI tools like Merlyn with our academic rigor, we uncover what truly matters to your audience and how your brand can resonate more deeply with them.
+    
+    </Fragment>
+
+    <Fragment slot="image">
+      <YouTube id="mLRY6-_IbaA" title="Dr. Tim Explains... Could This Be the Future of Brand Research?" />
+      <style is:inline>
+        lite-youtube {
+          margin: 0 auto;
+          max-width: 100%;
+        }
+      </style>
+    </Fragment>
+  </Hero>
+
+  
+<!-- Features Widget *************** -->
+
+<Features
+    id="features"
+    tagline="Our research toolkit"
+    title="The Leap Group Research Advantage"
+    subtitle="We use a blend of advanced technology and human expertise to provide comprehensive research methodologies. Our tools, powered by Merlyn, focus on delivering the most meaningful insights—not just data for data’s sake."
+    items={[
+        {
+            title: 'Survey',
+            description:
+            'Gather quantitative data directly from your target audience to understand preferences, behaviors, and opinions.',
+            icon: 'tabler:list',
+        },
+        {
+            title: 'Focus Groups',
+            description:
+            'Engage with selected groups to gather qualitative insights and understand the deeper motivations behind consumer decisions.',
+            icon: 'tabler:users',
+        },
+        {
+            title: 'Product Testing',
+            description:
+            'Evaluate the performance and appeal of your product with real users to ensure it meets market expectations.',
+            icon: 'tabler:device-mobile',
+        },
+        {
+            title: 'Interviews',
+            description:
+            'Conduct one-on-one interviews to explore individual perspectives and gain in-depth understanding.',
+            icon: 'tabler:message-circle',
+        },
+        {
+            title: 'Usability Testing',
+            description:
+            'Test the user experience of your product to identify pain points and improve overall usability.',
+            icon: 'tabler:hand-click',
+        },
+        {
+            title: 'Target Personas',
+            description:
+            'Develop detailed profiles of your ideal customers to tailor your marketing strategies effectively.',
+            icon: 'tabler:user',
+        },
+    ]}
+/>
+
+
+
+<!-- Steps2 Widget ****************** -->
+
+<Steps2
+title="We're Here to Help"
+subtitle="Get more information about getting started and optimizing lead generation with Merlyn."
+callToAction={{
+  text: 'Talk to a human',
+  href: '/contact',
+  icon: 'tabler:phone',
+}}
+items={[
+  {
+    title: 'Email us',
+    description: 'research@leapgroupnetwork.com',
+    icon: 'tabler:mail',
+  },
+  {
+    title: 'Call us',
+    description: '+1 (502) 212-1390',
+    icon: 'tabler:headset',
+  },
+  {
+    title: 'Follow us',
+    description: '@leapgroupnetwork',
+    icon: 'tabler:brand-linkedin',
+  },
+]}
+>
+  <Fragment slot="bg">
+    <div class="absolute inset-0 bg-green-50/50 dark:bg-black dark:bg-opacity-15"></div>
+  </Fragment>
+</Steps2>
+
+<FAQs
+    id="questions"
+    title="Key Questions We Help You Answer"
+    columns={3}
+    classes={{ container: 'max-w-6xl' }}
+    items={[
+        {
+            title: 'What motivates my customers?',
+            description:
+            "Uncover the needs and desires that drive your audience's decisions.",
+        },
+        {
+            title: 'Is this new business idea or product feasible?',
+            description:
+            "Test your concepts against market realities to ensure they meet a real need and have the potential for success.",
+        },
+        {
+            title: 'Where is the white space in my industry?',
+            description:
+            "Identify untapped opportunities in your industry and craft messaging that you can uniquely own.",
+        },
+        {
+            title: 'Does this creative concept resonate?',
+            description:
+            "Validate your ideas to ensure they hit the mark with your target audience.",
+        },
+        {
+            title: 'What is my customer’s sales journey?',
+            description:
+            "Map out the typical journey and identify key pain points to optimize conversion.",
+        },
+    ]}
+>
+    <Fragment slot="subtitle">
+        Our research helps you answer the questions that matter most to your brand’s success. 
+    </Fragment>
+</FAQs>
+
+<!-- Content Widget **************** -->
+
+<Content
+isReversed
+tagline="Real Results"
+title="Explore how we've helped brands like yours turn research into actionable insights."
+items={[
+    {
+      title: 'Increased Customer Engagement',
+      description:
+        'Through targeted research, we identified key motivators for U-Pull & Pay’s audience, leading to a more engaging and customer-centric experience.',
+    },
+    {
+      title: 'Optimized Messaging Strategy',
+      description:
+        'Our insights helped refine U-Pull & Pay’s messaging, ensuring it resonated with their target audience and clearly communicated their unique value proposition.',
+    },
+    {
+      title: 'Improved Conversion Rates',
+      description:
+        'By aligning the customer journey with the insights we gathered, U-Pull & Pay saw a significant boost in conversion rates, turning more leads into loyal customers.',
+    },
+  ]}  
+    image={{
+    src: '~/assets/images/upull-pay.jpg',
+    alt: 'U-Pull & Pay Case Study',
+    }}
+    callToAction={{
+        target: '_blank',
+        text: 'View the case study',
+        icon: 'tabler:chevron-right',
+        href: '#',
+    }}
+>
+<Fragment slot="content">
+  <h2 class="text-2xl  font-light tracking-tight dark:text-white sm:ext-3xl mb-6">  U-Pull & Pay </h2>
+  <hr class="mb-6 w-12 border-primary border-4 dark:divide-black">
+  <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2"> How we used research <br class="hidden md:inline" /> to rebuild the hotrod </h3>
+ 
+ 
+</Fragment>
+
+<Fragment slot="bg">
+  <div class="absolute inset-0 bg-green-50/50 dark:bg-black dark:bg-opacity-15"></div>
+</Fragment>
+</Content>
+
+<!-- Content Widget **************** -->
+
+<Content
+isAfterContent
+items={[
+    {
+      title: 'Deep Customer Understanding',
+      description:
+        'By conducting in-depth research, we uncovered what truly drives Kubota’s customers, allowing us to tailor strategies that align with their needs and values.',
+    },
+    {
+      title: 'Enhanced Brand Perception',
+      description:
+        'Our insights led to a refreshed brand narrative for Kubota, strengthening its connection with customers and elevating brand perception in the market.',
+    },
+    {
+      title: 'Strategic Market Positioning',
+      description:
+        'Using competitive analysis, we helped Kubota identify market opportunities and strategically position their brand to stand out from competitors.',
+    },
+  ]}
+  
+image={{
+  src: '~/assets/images/kubota.jpg',
+  alt: 'Kubota Case Study',
+}}
+callToAction={{
+    target: '_blank',
+    text: 'View the case study',
+    icon: 'tabler:chevron-right',
+    href: '#',
+}}
+>
+<Fragment slot="content">
+  <h2 class="text-2xl  font-light tracking-tight dark:text-white sm:ext-3xl mb-6">Kubota</h2>
+  <hr class="mb-6 w-12 border-primary border-4 dark:divide-black">
+  
+  <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">How we used research to cultivate<br class="hidden md:inline" /> deeper customer connections
+  </h3>
+   
+</Fragment>
+
+<Fragment slot="bg">
+  <div class="absolute inset-0 bg-green-50/50 dark:bg-black dark:bg-opacity-15"></div>
+</Fragment>
+</Content>
+
+<!-- Content Widget **************** -->
+
+<Content
+isReversed
+isAfterContent
+items={[
+    {
+      title: 'Unified Brand Identity',
+      description:
+        'Through comprehensive research, we helped Premier Health consolidate its brand across multiple locations, ensuring a consistent and cohesive identity that resonates with patients.',
+    },
+    {
+      title: 'Improved Patient Engagement',
+      description:
+        'Our insights revealed key touchpoints in the patient journey, enabling Premier Health to enhance engagement and provide a more personalized healthcare experience.',
+    },
+    {
+      title: 'Strategic Communication Strategy',
+      description:
+        'We developed a communication strategy grounded in research that effectively conveyed Premier Health’s commitment to high-quality care, strengthening trust and loyalty among patients.',
+    },
+  ]}  
+image={{
+  src: '~/assets/images/premier-health.jpg',
+  alt: 'Premier Health',
+}}
+callToAction={{
+    target: '_blank',
+    text: 'View the case study',
+    icon: 'tabler:chevron-right',
+    href: '#',
+}}
+>
+<Fragment slot="content">
+  <h2 class="text-2xl  font-light tracking-tight dark:text-white sm:ext-3xl mb-6">  Premier Health</h2>
+  <hr class="mb-6 w-12 border-primary border-4 dark:divide-black">
+  <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">How we used research to unify<br class="hidden md:inline" /> a brand and elevate patient care</h3>
+
+</Fragment>
+
+<Fragment slot="bg">
+  <div class="absolute inset-0 bg-green-50/50 dark:bg-black dark:bg-opacity-15"></div>
+</Fragment>
+</Content>
+
+  <!-- CallToAction Widget *********** -->
+
+  <CallToAction
+  
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Request a Quote',
+        href: 'http://www.leapgroupnetwork.com',
+        icon: 'tabler:trending-up',
+      },
+    ]}
+  >
+    <Fragment slot="title">Get in Touch<br class="hidden md:inline" /></Fragment>
+
+    <Fragment slot="subtitle">
+        Interested in how Leap can elevate your brand?
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-green-50/50 dark:bg-black dark:bg-opacity-15"></div>
+    </Fragment>
+    
+  </CallToAction>
+</Layout>

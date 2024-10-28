@@ -1,5 +1,6 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
+import Header from '~/components/widgets/Header.astro';
 
 import Hero from '~/components/widgets/Hero.astro';
 import Features2 from '~/components/widgets/Features2.astro';
@@ -16,7 +17,21 @@ const metadata = {
 ---
 
 <Layout metadata={metadata}>
-  
+  <Fragment slot="header">
+    <Header
+      links={[
+        
+      ]}
+      actions={[
+        {
+          text: 'Back to Homepage',
+          href: 'https://leaphumanx.com',
+        },
+      ]}
+      isSticky
+      showToggleTheme
+    />
+  </Fragment>
   <!-- Hero Section -->
   <Hero
     tagline="Crafting Iconic Beverage Experiences"
