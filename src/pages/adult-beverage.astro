@@ -63,8 +63,8 @@ const metadata = {
       ]}
       actions={[
         {
-          text: 'Back to Homepage',
-          href: 'https://leaphumanx.com',
+          text: 'Contact Us',
+          href: 'https://leapgroupnetwork.com/contact',
         },
       ]}
       isSticky
@@ -79,24 +79,14 @@ const metadata = {
         alt: 'Leap Group About Image',
       }}
     actions={[
-      {
-        variant: 'primary',
-        text: 'Explore Our Work',
-        href: '#case-studies',
-        icon: 'tabler:eye',
-      },
-      {
-        text: 'Partner with Us',
-        href: '/contact',
-        variant: 'secondary',
-      },
+      
     ]}
   >
     <Fragment slot="title">
-      <span class="text-primary dark:text-white highlight">Leap Group</span> Helps Beverage Brands Matter More
+      We Make Beverage &nbsp;<br class="hidden md:inline"/>Brands Matter More
     </Fragment>
     <Fragment slot="subtitle">
-      Leap Group partners with leading adult beverage brands to tell compelling stories, create unforgettable experiences, and elevate brands through innovative marketing solutions.
+      We partners with leading adult beverage brands to tell &nbsp;<br class="hidden md:inline"/>compelling stories, create unforgettable experiences,&nbsp;<br class="hidden md:inline"/> and elevate brands through innovative marketing solutions.
     </Fragment>
     
   </Hero>
@@ -106,43 +96,30 @@ const metadata = {
     title="Trusted by Industry Leaders"
     subtitle="We've partnered with the world's most renowned adult beverage brands to deliver impactful marketing solutions that resonate with consumers."
     images={[
-        {
-          src: '~/assets/images/akc-logo.webp',
-          alt: 'American Kennel Club',
+       {
+        src: '~/assets/images/lunazul-logo.png',
+        alt: 'Lunazul Tequila logo',
+      },
+      {
+        src: '~/assets/images/heaven-hill-logo.png',
+        alt: 'Heaven Hill Brands logo',
+      },
+      {
+        src: '~/assets/images/admiral-nelson-logo.webp',
+        alt: 'Admiral Nelson Brands logo',
         },
         {
-          src: '~/assets/images/duck-brands.jpg',
-          alt: 'Duck Brands',
-        },
-        {
-          src: '~/assets/images/umcu.png',
-          alt: 'UMCU',
-        },
-  
-        {
-          src: '~/assets/images/uofl.svg',
-          alt: 'University of Louisville',
-        },
-        {
-          src: '~/assets/images/texas.jpeg',
-          alt: 'Texas Road House',
-        },
-        {
-          src: '~/assets/images/pf-chang.png',
-          alt: 'Pf Changs',
-        },
-        {
-          src: '~/assets/images/john-frieda-grey.png',
-          alt: 'John Frieda',
+        src: '~/assets/images/deep-eddy-logo.png',
+        alt: 'Admiral Nelson Brands logo',
         },
       ]}
-    />
+
   />
 
   <!-- Our Expertise Section -->
   <Features2
-    title="End-to-End Marketing Solutions for Beverage Brands"
-    subtitle="From brand strategy to social media campaigns, Leap Group's expertise helps adult beverage brands capture attention, build loyalty, and stand out."
+    
+  
     tagline="Services We Provide"
     items={[
       {
@@ -176,8 +153,14 @@ const metadata = {
         icon: 'tabler:user',
       },
     ]}
-  />
-
+  >
+    <Fragment slot="title">
+      End-to-End Marketing&nbsp;<br class="hidden md:inline"/>Solutions for Beverage Brands
+    </Fragment>
+    <Fragment slot="subtitle">
+      From brand strategy to social media campaigns, our expertise helps &nbsp;<br class="hidden md:inline"/>adult beverage brands capture attention, build loyalty, and stand out.
+    </Fragment>
+</Features2>
   
 
   <!-- Content Widget **************** -->
@@ -205,7 +188,7 @@ const metadata = {
     },
   ]}
   image={{
-    src: '~/assets/images/lunazul.jpg',
+    src: '~/assets/images/lunazul-campaign.webp',
     alt: 'Lunazul Tequila Case Study',
   }}
   callToAction={{
@@ -296,7 +279,7 @@ const metadata = {
     },
   ]}
   image={{
-    src: '~/assets/images/christian-moerlein.jpg',
+    src: '~/assets/images/moerlein.png',
     alt: 'Christian Moerlein Case Study',
   }}
   callToAction={{
@@ -341,7 +324,7 @@ const metadata = {
     },
   ]}
   image={{
-    src: '~/assets/images/deep-eddy.jpg',
+    src: '~/assets/images/deep-eddy-30.jpg',
     alt: 'Deep Eddy Vodka Case Study',
   }}
   callToAction={{
@@ -370,46 +353,32 @@ const metadata = {
     title="What Our Clients Say"
     testimonials={[
       {
-        testimonial: `Leap Group’s creative approach transformed Lunazul Tequila from a hidden gem into a must-have brand for tequila lovers. Their social media strategy drove significant engagement and helped us elevate our presence in the competitive spirits market.`,
+        testimonial: `Their creative approach transformed Lunazul Tequila from a hidden gem into a must-have brand for tequila lovers. Their social media strategy drove significant engagement and helped us elevate our presence in the competitive spirits market.`,
         name: 'John Beckmann',
         job: 'Brand Manager, Lunazul Tequila',
-        image: {
-          src: 'https://images.unsplash.com/photo-1598511727105-c2d3d3e44561?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
-          alt: 'John Beckmann Image',
-        },
+       
       },
       {
-        testimonial: `Their deep understanding of our brand and audience allowed Leap Group to create dynamic content that resonated with rum enthusiasts. Admiral Nelson saw unprecedented growth in engagement across our social platforms, thanks to their expertise.`,
+        testimonial: `Their deep understanding of our brand and audience allowed them to create dynamic content that resonated with rum enthusiasts. Admiral Nelson saw unprecedented growth in engagement across our social platforms, thanks to their expertise.`,
         name: 'Lisa Johnson',
         job: 'Marketing Director, Admiral Nelson',
-        image: {
-          src: 'https://images.unsplash.com/photo-1623707292361-6c2c3211b6a0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
-          alt: 'Lisa Johnson Image',
-        },
+        
       },
       {
-        testimonial: `Leap Group revitalized Christian Moerlein by tapping into Cincinnati's brewing history. Their storytelling brought our brand back to the forefront of local craft beer, driving both awareness and loyalty.`,
+        testimonial: `They revitalized Christian Moerlein by tapping into Cincinnati's brewing history. Their storytelling brought our brand back to the forefront of local craft beer, driving both awareness and loyalty.`,
         name: 'Andrew Jackson',
         job: 'CEO, Christian Moerlein Brewing Co.',
-        image: {
-          src: 'https://images.unsplash.com/photo-1602740378460-d3fda51edc9a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
-          alt: 'Andrew Jackson Image',
-        },
+        
       },
     ]}
-    callToAction={{
-      target: '_blank',
-      text: 'More testimonials...',
-      href: '#',
-      icon: 'tabler:chevron-right',
-    }}
+    
   />
 
 
   <!-- Our Process Section -->
   <Steps2
   title="Our Process"
-  subtitle="Leap Group combines industry expertise with a results-driven approach to help adult beverage brands stand out in a competitive market."
+  subtitle="We combine industry expertise with a results-driven approach to help adult beverage brands stand out in a competitive market."
   items={[
     {
       title: 'Discovery and Research',
@@ -438,12 +407,12 @@ const metadata = {
   <!-- Call To Action Section -->
   <CallToAction
     title="Ready to Elevate Your Beverage Brand?"
-    subtitle="Contact Leap Group to learn more about how we can help your brand shine in the competitive adult beverage market."
+    subtitle="Contact us to learn more about how we can help your brand shine in the competitive adult beverage market."
     actions={[
       {
         variant: 'primary',
         text: 'Contact Us',
-        href: '/contact',
+        href: 'https://leapgroupnetwork.com/contact/',
         icon: 'tabler:mail',
       },
     ]}
